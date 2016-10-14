@@ -1,0 +1,65 @@
+/**
+ * Created by Ants on 2016/9/2.
+ */
+function getHouse(farmId, farmName) {
+    var param;
+    if (farmId == ""){
+        param = {"farmId":""};
+    }else{
+        param = {"farmId":farmId};
+    }
+    $.ajax({
+        type: "post",
+        url: path + "/monitor/getHouse",
+        data:param,
+        dataType: "json",
+        cache: false,
+        async: false,
+        success: function (result) {
+            var list = result.obj;
+            // if (flag == farmId) {
+            // }
+            for (var i = 0; i < list.length; i++) {
+                $("#houseId").append("<li><td><input id='checkHouseId' name='checkHouseId' type='checkbox' value=" + list[i].id + " method='get'/>"+ farmName + list[i].house_name + "</td></li>");
+            }
+            if (houseId != '') {
+                $("#houseId").val(houseId);
+            } else {
+                $("#houseId").val(list[0].id);
+            }
+        }
+    });
+}
+function saveSet() {
+    var houses = new Array();
+    var checkedHouse = document.getElementsByName("checkHouseId");
+    for (var i = 0; i < checkedHouse.length; ++i){
+        if (checkedHouse[i].checked) {
+            houses.push(checkedHouse[i].value);
+        }
+    }
+    var farms = new Array();
+    var checkedFarm = document.getElementsByName("checkFarmId");
+    for (var j = 0; j < checkedFarm.length; ++j){
+        if (checkedFarm[j].checked){
+            farms.push(checkedFarm[j].value);
+        }
+    }
+    if (houses == ''){
+        alert("请选择！");
+    }else{
+        $.ajax({
+            url:path + "/monitor/saveSet",
+            data:{"house_id_group":houses.toString(),"farm_id_group":farms.toString()},
+            type:"POST",
+            dataType:"json",
+            success:function (result) {
+                if (result.msg = '1'){
+                    alert("添加成功！");
+                }else{
+                    alert("添加失败！");
+                }
+            }
+        })
+    }
+}

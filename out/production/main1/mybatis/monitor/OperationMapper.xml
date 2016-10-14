@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="OperationMapper">
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache" />
+     <select id="selectByConditionForSelect" parameterType="pd" resultType="pd" useCache="false">
+         SELECT
+          id,
+          organization_id,
+          name_cn,
+          parent_id,
+          level_id,
+          level_name,
+          create_person,
+          create_date,
+          create_time
+         FROM s_d_organization
+         WHERE 1=1
+         <if test="companyId == null">
+             AND level_id = 1;
+         </if>
+         <if test="companyId != null">
+             AND parent_id in (
+             <foreach collection="companyId" item="item" index="index" separator=",">
+                #{item}
+            </foreach>
+             )
+         </if>
+         <if test="areaId != null">
+             OR parent_id in (
+             <foreach collection="areaId" item="item" index="index" separator=",">
+                 #{item}
+             </foreach>
+            )
+         </if>
+         <if test="farmId != null">
+             OR parent_id in (
+             <foreach collection="farmId" item="item" index="index" separator=",">
+                #{item}
+            </foreach>
+             )
+         </if>
+     </select>
+</mapper>

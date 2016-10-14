@@ -1,0 +1,203 @@
+var tickInterval=2;
+
+$(document).ready(function(){
+	 $('.date-picker').datepicker({
+     	language: 'zh-CN',
+         autoclose: true,
+         todayHighlight: true
+     });
+	 
+	 var win_h = $(window).height()-208;
+	 $("#user_date_table").css("min-height",win_h);
+	 $("#page-content").css("min-height",win_h);
+	 $("#container").css("height",win_h-50);
+	    
+	 $("#farmId").change(function() {
+		 setHouseId();
+		});
+
+		$("#houseId").change(function() {
+			queryAlarmHist();
+		});
+		$("#alarmName").change(function() {
+			queryAlarmHist();
+		});
+		$("#queryTime").change(function() {
+			queryAlarmHist();
+		});
+		
+		  setHouseId();
+		  
+		  queryAlarmHist();
+	});
+	 
+function setHouseId(){
+	$.ajax({
+		type : "post",
+		url : path + "/alarmHist/getHouse",
+		data : {
+			"farmId" : $("#farmId").val()
+		},
+		dataType: "json",
+		success : function(result) {
+			var list = result.obj;
+			$("#houseId option").remove();
+			for (var i = 0; i < list.length; i++) {
+				$("#houseId").append("<option value=" + list[i].id + ">" + list[i].house_name+ "</option>");
+			}
+//			$("#houseId").val(list[0].id);
+//			setAlarmName();
+			queryAlarmHist();
+		}
+	});
+}
+
+function setAlarmName(){
+	$.ajax({
+		type : "post",
+		url : path + "/alarmHist/getAlarmName",
+		data : {
+			"farmId" : $("#farmId").val(),
+			"houseId" : $("#houseId").val()
+		},
+		dataType: "json",
+		success : function(result) {
+			var list = result.obj;
+			$("#alarmName option").remove();
+			$("#alarmName").append("<option value=\"\">" + "全部" + "</option>");
+			for (var i = 0; i < list.length; i++) {
+				$("#alarmName").append("<option value=" + list[i].biz_code+ ">" + list[i].code_name + "</option>");
+			}
+//			$("#alarmName").val(list[0].code_name);
+			queryAlarmHist(); 
+		}
+	});
+}
+
+function  queryAlarmHist(){
+	$.ajax({
+		type : "post",
+		url : path + "/alarmHist/queryAlarmHist",
+		data : {
+			"farmId" : $("#farmId").val(),//农场
+			"houseId" : $("#houseId").val(),//栋舍
+			"alarmName" : $("#alarmName").val(),//警报名称
+			"queryTime" : $("#queryTime").val(),//日期
+			"buttonValue" : $("#buttonValue").val()//点击按钮值
+		},
+		dataType: "json",
+		success : function(result) {
+			 xNames = [];//清空X坐标
+			 alarmNum = [];
+             alarmNum1 = [];
+             alarmNum2 = [];
+             alarmNum3 = [];
+			var list = result.obj;
+			for (var i = 0; i < list.length; i++) {
+				if(list[i].time == null){
+					xNames.push(list[i].date.substring(0,10));
+				}else{
+					xNames.push(list[i].time+'点');
+				}
+				alarmNum.push(list[i].alarm_num);
+		  }
+			
+			var seriesName=[{
+				name: $("select[name='houseId']").find("option:selected").text(),
+				lineWidth: 1,
+	            states: {
+                    hover: {
+                        lineWidth: 1
+                    }
+                },
+                marker: {
+                    enabled: false
+                },
+				data:alarmNum
+			}];
+			createChar(seriesName);
+		}
+	});
+}
+
+function  buttonWeek(){
+	$("#buttonValue").val("week");
+	tickInterval=1;
+	queryAlarmHist();
+}
+function  buttonMonth(){
+	tickInterval=2;
+	$("#buttonValue").val("month");
+	queryAlarmHist();
+	
+}
+function  buttonDay(){
+	tickInterval=2;
+	$("#buttonValue").val("day");
+	queryAlarmHist();
+}
+
+
+/**
+ * 创建警报历史统计图
+ */
+function createChar(seriesName) {
+	 $('#container').highcharts({
+		   chart: {
+		          type: 'spline'
+		      },
+	        title: {
+	            text: '',
+	            x: -20 //center
+	        },
+	        xAxis: {
+	        	tickInterval: tickInterval,
+	            categories: xNames
+	        },
+	        credits: {
+	            enabled: false
+	       },
+	       height:300,
+	        yAxis: {
+	            title: {
+	                text: '数量(条)'
+	            },
+//	            min: 0,
+	            minorGridLineWidth: 0,
+	            gridLineWidth: 0,
+	            alternateGridColor: null,
+	            plotLines: [{
+	                value: 0,
+	                width: 1,
+	                color: '#808080'
+	            }]
+	        },
+	        tooltip: {
+	            valueSuffix: '条'
+	        },
+	        plotOptions: {
+	        	allowPointSelect:false,
+	            spline: {
+	                lineWidth: 1,
+	                states: {
+	                    hover: {
+	                        lineWidth: 5
+	                    }
+	                },
+	                marker: {
+	                    enabled: false
+	                }
+	            }
+	        },
+	        legend: {
+	            layout: 'vertical',
+	            align: 'right',
+	            verticalAlign: 'middle',
+	            borderWidth: 0
+	        },
+	        series: seriesName
+	    });
+}
+
+
+
