@@ -13,10 +13,35 @@
 		<result column="SORT_DATE" property="SORT_DATE" />
 		<result column="CREATE_DATE" property="CREATE_DATE" />
 		<result column="ISENABLED" property="ISENABLED" />
+		<result column="write_read" property="write_read" />
 	</resultMap>
 
 	<select id="listAllParentMenu" parameterType="pd" resultMap="menuResultMap">
-		SELECT
+		select 
+			m.MENU_ID,
+			m.MENU_ID,
+			m.MENU_PID,
+			m.MENU_NAME,
+			m.MENU_URL,
+			m.MENU_ICON,
+			m.ISENABLED,
+			a.write_read 
+		from s_d_menu m
+		LEFT JOIN s_d_rights c
+		on m.MENU_ID = c.obj_id
+		LEFT JOIN s_d_role_rights a
+		on c.rights_id = a.rights_id
+		LEFT JOIN s_d_user_role b
+		on a.role_id = b.role_id
+		where c.obj_type = 1
+		and m.MENU_PID=0
+		and m.ISENABLED = '1'
+		<if test="user_id != null">
+			AND b.user_id = #{user_id}
+		</if>
+		order by m.MENU_ID
+	
+		<!-- SELECT
 		s_d_menu.MENU_ID,
 		s_d_menu.MENU_PID,
 		s_d_menu.MENU_NAME,
@@ -27,11 +52,39 @@
 		s_d_menu
 		WHERE s_d_menu.MENU_PID=0
 	    and s_d_menu.ISENABLED = '1'
-		order by MENU_ID
+		order by MENU_ID -->
 	</select>
 
 	<select id="listSubMenuByParentId" parameterType="pd" resultMap="menuResultMap">
-		SELECT
+		select 
+			m.MENU_ID,
+			m.MENU_ID,
+			m.MENU_PID,
+			m.MENU_NAME,
+			m.MENU_URL,
+			m.MENU_ICON,
+			m.ISENABLED,
+			a.write_read  
+		from s_d_menu m
+		LEFT JOIN s_d_rights c
+		on m.MENU_ID = c.obj_id
+		LEFT JOIN s_d_role_rights a
+		on c.rights_id = a.rights_id
+		LEFT JOIN s_d_user_role b
+		on a.role_id = b.role_id
+		where c.obj_type = 1
+		and m.ISENABLED = '1'
+		<if test="user_id != null">
+			AND b.user_id = #{user_id}
+		</if>
+		<if test="MENU_PID != null">
+			AND m.MENU_PID = #{MENU_PID}
+		</if>
+		order by m.MENU_ID
+	
+	
+	
+		<!-- SELECT
 		s_d_menu.MENU_ID,
 		s_d_menu.MENU_PID,
 		s_d_menu.MENU_NAME,
@@ -42,6 +95,6 @@
 		s_d_menu
 		WHERE s_d_menu.MENU_PID= #{MENU_PID}
 		and s_d_menu.ISENABLED = '1'
-		order by MENU_ID
+		order by MENU_ID -->
 	</select>
 </mapper>

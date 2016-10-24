@@ -9,8 +9,8 @@
 			date,
 			right(time,2) as time,
 			batch_no,
-			negative_pressure,
-			high_alarm_negative_pressure
+			ROUND(negative_pressure,1) negative_pressure,
+			ROUND(high_alarm_negative_pressure,1) high_alarm_negative_pressure
 	FROM rpt_monitor_daily
 	where 1=1
 		<if test="farmId != null and farmId !=''">
@@ -33,8 +33,8 @@
 			month,
 			date,
 			batch_no,
-			negative_pressure,
-			high_alarm_negative_pressure
+			ROUND(negative_pressure,1) negative_pressure,
+			ROUND(high_alarm_negative_pressure,1) high_alarm_negative_pressure
 	FROM rpt_monitor_month
 	where 1=1
 		<if test="farmId != null and farmId !=''">
@@ -49,6 +49,7 @@
 		<if test="beginTime != null and endTime != null">
 			AND (`date` BETWEEN #{beginTime} AND #{endTime} )
 		</if>
+		ORDER BY DATE 
 	</select>
 
 </mapper>
