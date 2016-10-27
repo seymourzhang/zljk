@@ -1,5 +1,6 @@
 var tickInterval=2;
 var count0rg;
+var num;
 
 $(document).ready(function(){
 	 $('.date-picker').datepicker({
@@ -13,6 +14,11 @@ $(document).ready(function(){
 	 $("#page-content").css("min-height",win_h);
 	 $("#container").css("height",win_h-50);
 	 
+	 
+//	 $("#btn").click(function(){
+//		    var div = $("#tempRep");
+//		        div.show();
+//		})
 	
 //	   $("#farmId").change(function() {
 //		 setHouseId();
@@ -22,18 +28,39 @@ $(document).ready(function(){
 //			setBatchId();
 //		});
 		$("#batchId").change(function() {
-			queryTemProfile(count0rg);
+			OrgSearch(count0rg,num);
 		});
 		$("#queryTime").change(function() {
-			queryTemProfile(count0rg);
+			OrgSearch(count0rg,num);
 		});
-//	 
+
+		function time(){
+		    var time=new Date();
+		    var h=time.getFullYear();
+		    var m=time.getMonth()+1;
+		    var d=time.getDate();
+		    return h+"-"+m+"-"+d;
+		}
+		document.getElementById("queryTime").value = time();
+		
+		
 //	 setHouseId();
 //	 setBatchId();
 	 createChar();
 	
 });
 
+function OrgSearch(count0rg,num){
+	queryTemProfile(count0rg);
+}
+
+function show(){
+	document.getElementById("tempRep").style.display="block";
+}
+
+function hidden(){
+	document.getElementById("tempRep").style.display="none";
+}
 //function setHouseId(){
 //	$.ajax({
 //		type : "post",
@@ -81,6 +108,19 @@ $(document).ready(function(){
 //		}
 //	})
 //}
+
+function tempCompareUrl() {
+	layer.open({
+		type : 2,
+		title : "请选择",
+		skin : 'layui-layer-lan',
+		area : [ '650px', '350px' ],
+		content : path + "/temProfile/tempCompareUrl?farmId="
+				+ $("#farmId").val() + "&houseId=" + $("#houseId").val()
+				+ "&batchId=" + $("#batchId").val()
+	});
+}
+
 function  queryTemProfile(count0rg){
 	$.ajax({
 		type : "post",
@@ -316,5 +356,228 @@ function createChar() {
 	    });
 }
 
+function btWeek() {
+	$("#btValue").val("week");
+	tickInterval = 1;
+	queryTemProfile3();
+}
+function btMonth() {
+	tickInterval = 2;
+	$("#btValue").val("month");
+	queryTemProfile3();
+
+}
+function btDay() {
+	tickInterval = 2;
+	$("#btValue").val("day");
+	queryTemProfile3();
+}
+
+function queryTemProfile3() {
+	$.ajax({
+		type : "post",
+		url : path + "/temProfile/queryTemProfile",
+		data : {
+			"farmId" : $("#farmId2").val(),
+			"houseId" : $("#houseId2").val(),
+			"batchId" : $("#batchId2").val(),
+			"queryTime" : $("#queryTime2").val(),// 日期
+			"btValue" : $("#btValue").val()
+		// 点击按钮值
+		},
+		dataType : "json",
+		success : function(result) {
+			var xpNames = new Array();// 清空X坐标
+			var insideTemp01 = new Array();// X坐标
+			var insideTemp02 = new Array();// X坐标
+			var insideTemp03 = new Array();// X坐标
+			var insideTemp04 = new Array();// X坐标
+
+			var insideSetTemps = new Array();// 清空目标温度
+			var highAlarmTemps = new Array();// 清空高报温度
+			var lowAlarmTemps = new Array();// 清空低报温度
+			var outsideTemps = new Array();// 清空室外温度
+
+			var lists = result.obj;
+			for (var i = 0; i < lists.length; i++) {
+				if (lists[i].time == null) {
+					xpNames.push(lists[i].date.substring(0, 10));
+				} else {
+					xpNames.push(lists[i].time + '点');
+				}
+				insideTemp01.push(lists[i].inside_temp1);
+				insideTemp02.push(lists[i].inside_temp2);
+				insideTemp03.push(lists[i].inside_temp3);
+				insideTemp04.push(lists[i].inside_temp4);
+				insideSetTemps.push(lists[i].inside_set_temp);
+				highAlarmTemps.push(lists[i].high_alarm_temp);
+				lowAlarmTemps.push(lists[i].low_alarm_temp);
+				outsideTemps.push(lists[i].outside_temp);
+			}
+			createChar3(xpNames, insideSetTemps, insideTemp01, insideTemp02,insideTemp03, insideTemp04, highAlarmTemps, lowAlarmTemps,outsideTemps);
+		}
+	});
+}
+
+// 对比图
+function createChar3(xNames, insideSetTemp, insideTemp1, insideTemp2,insideTemp3, insideTemp4, highAlarmTemp, lowAlarmTemp, outsideTemp) {
+	$('#compareRep').highcharts({
+		chart : {
+			type : 'spline'
+		},
+		title : {
+			text : '',
+			x : -20
+		// center
+		},
+		xAxis : {
+			tickInterval : tickInterval,
+			// tickPositions: [0, 2, 4, 6, 8],
+			categories : xNames
+		},
+		credits : {
+			enabled : false
+		},
+		height : 300,
+		yAxis : {
+			title : {
+				text : '温度(°C)'
+			},
+			min : -15,
+			minorGridLineWidth : 0,
+			gridLineWidth : 0,
+			alternateGridColor : null,
+			plotLines : [ {
+				value : 0,
+				width : 1,
+				color : '#808080'
+			} ]
+		},
+		tooltip : {
+			valueSuffix : '°C'
+		},
+		plotOptions : {
+			allowPointSelect : false,
+			spline : {
+				lineWidth : 1,
+				states : {
+					hover : {
+						lineWidth : 5
+					}
+				},
+				marker : {
+					enabled : false
+				}
+			}
+		},
+		legend : {
+			layout : 'vertical',
+			align : 'right',
+			verticalAlign : 'middle',
+			borderWidth : 0
+		},
+		series : [ {
+			name : '目标温度',
+			lineWidth : 1,
+			states : {
+				hover : {
+					lineWidth : 1
+				}
+			},
+			marker : {
+				enabled : false
+			},
+			data : insideSetTemp
+		}, {
+			name : '探头1',
+			lineWidth : 1.5,
+			states : {
+				hover : {
+					lineWidth : 1.5
+				}
+			},
+			marker : {
+				enabled : false
+			},
+			data : insideTemp1
+
+		}, {
+			name : '探头2',
+			lineWidth : 1.5,
+			states : {
+				hover : {
+					lineWidth : 1.5
+				}
+			},
+			marker : {
+				enabled : false
+			},
+			data : insideTemp2
+
+		}, {
+			name : '探头3',
+			lineWidth : 1.5,
+			states : {
+				hover : {
+					lineWidth : 1.5
+				}
+			},
+			marker : {
+				enabled : false
+			},
+			data : insideTemp3
+
+		}, {
+			name : '探头4',
+			lineWidth : 1.5,
+			states : {
+				hover : {
+					lineWidth : 1.5
+				}
+			},
+			marker : {
+				enabled : false
+			},
+			data : insideTemp4
+
+		}, {
+			name : '高报温度',
+			lineWidth : 2,
+			states : {
+				hover : {
+					lineWidth : 2
+				}
+			},
+			marker : {
+				enabled : false
+			},
+			data : highAlarmTemp
+		}, {
+			name : '低报温度',
+			lineWidth : 2.5,
+			states : {
+				hover : {
+					lineWidth : 2.5
+				}
+			},
+			marker : {
+				enabled : false
+			},
+			data : lowAlarmTemp
+		}, {
+			name : '室外温度',
+			lineWidth : 3,
+			states : {
+				hover : {
+					lineWidth : 3
+				}
+			},
+			marker : {
+				enabled : false
+			},
+			data : outsideTemp
+		} ]
+	});
+}
 
 

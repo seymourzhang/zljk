@@ -1,28 +1,41 @@
+var count0rg;
+var num;
+
+
+function OrgSearch(count0rg,num){
+	reflushMonitor();
+}
 
 function reflushMonitor() {
 //  var param =$.serializeObject($('#farmData'));
     var obj = document.getElementById("enableMonitorSet");
     var param;
-    var farmList = $("#farmId").val();
-    var houseList = $("#houseId").val();
-    if ($("#farmId").val() == "" && $("#houseId").val() == "" && !obj.checked) {
-        param = {"checked":"false"};
-    } else if ($("#farmId").val() == "" && $("#houseId").val() != "" && !obj.checked) {
-        param = {"houseId": houseList,"checked":"false"};
-    } else if ($("#farmId").val() != "" && $("#houseId").val() == "" && !obj.checked) {
-        param = {"farmId": farmList, "checked":"false"};
-    } else if ($("#farmId").val() != "" && $("#houseId").val() != "" && !obj.checked) {
-        param = {"farmId": farmList, "houseId": houseList, "checked":"false"};
+//    var farmList = $("#farmId").val();
+//    var houseList = $("#houseId").val();
+//    if ($("#farmId").val() == "" && $("#houseId").val() == "" && !obj.checked) {
+//        param = {"checked":"false"};
+//    } else if ($("#farmId").val() == "" && $("#houseId").val() != "" && !obj.checked) {
+//        param = {"houseId": houseList,"checked":"false"};
+//    } else if ($("#farmId").val() != "" && $("#houseId").val() == "" && !obj.checked) {
+//        param = {"farmId": farmList, "checked":"false"};
+//    } else 
+    	if (!obj.checked) {
+        param = {"farmId": $("#orgId"+(count0rg-1)).val().split(",")[1],
+        		"houseId": $("#orgId"+count0rg).val().split(",")[1], 
+        		"checked":"false"
+        			};
     } else if (obj.checked) {
-        param = {"checked":"true"};
+        param = {"farmId": $("#orgId"+(count0rg-1)).val().split(",")[1], 
+        		"houseId": $("#orgId"+count0rg).val().split(",")[1], 
+        		"checked":"true"};
     }
     var obj = document.getElementById("enableMonitorSet");
     if (obj.checked) {
-        document.getElementById("farmId").disabled = true;
-        document.getElementById("houseId").disabled = true;
+        document.getElementById("orgId"+(count0rg-1)).disabled = true;
+        document.getElementById("orgId"+count0rg).disabled = true;
     } else {
-        document.getElementById("farmId").disabled = false;
-        document.getElementById("houseId").disabled = false;
+        document.getElementById("orgId"+(count0rg-1)).disabled = false;
+        document.getElementById("orgId"+count0rg).disabled = false;
     }
     $.ajax({
         // async: true,

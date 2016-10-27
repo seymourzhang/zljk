@@ -61,11 +61,33 @@
 													<div>
 													 <div id="state2">
 													 
-														<div class="span3">
+													 <div class="span3" style="width: 250px;">
 															<div class="control-group">
-																<label class="control-label" style="width: 50px;">农场</label>
-																<div class="controls" style="margin-left: 55px;">
-																	<select id="farmId" class="m-wrap span12" tabindex="1" name="farmId" onchange="reflushAlarmHist(1);">
+																<label class="control-label" style="width: 30px;">公司</label>
+																<div class="controls" style="margin-left: 35px;">
+																	<select id="companyId" style="width: 200px;" tabindex="1" name="companyId">
+			 															<option value="">中粮肉食投资有限公司</option>  
+																	</select>
+																</div>
+															</div>
+														</div>
+														
+														<div class="span3" style="width: 220px;">
+															<div class="control-group">
+																<label class="control-label" style="width: 30px;">基地</label>
+																<div class="controls" style="margin-left: 35px;">
+																	<select id="jidiId" style="width: 160px;" tabindex="1" name="jidiId">
+			 															<option value="">吉林养殖</option>  
+																	</select>
+																</div>
+															</div>
+														</div>
+													 
+														<div class="span3" style="width: 220px;">
+															<div class="control-group">
+																<label class="control-label" style="width: 30px;">农场</label>
+																<div class="controls" style="margin-left: 35px;">
+																	<select id="farmId" style="width: 160px;" tabindex="1" name="farmId" onchange="reflushAlarmHist(1);">
 			<!-- 															<option value="">全部</option>  -->
 																		 <c:if test="${!empty farmList}">
 																		 <c:forEach var="farm" items="${farmList}">
@@ -79,7 +101,7 @@
 
 														<!--/span-->
 
-														<div class="span3">
+														<div class="span3" style="width: 220px;">
 
 															<div class="control-group">
 																<label class="control-label" style="width: 30px;">栋舍</label>
@@ -97,7 +119,7 @@
 
 														</div>
 
-														<div class="span3">
+														<div class="span3" style="width: 220px;">
 															<div class="control-group">
 																<label class="control-label" style="width: 30px;">批次</label>
 																<div class="controls" style="margin-left: 35px;">
@@ -116,10 +138,33 @@
                                                         
                                                         <div id="detail2">
                                                         <input type="hidden" name="dateage" id="dateage">
-                                                        <div class="span3">
+                                                        
+                                                        <div class="span3" style="width: 250px;">
 															<div class="control-group">
-																<label class="control-label" style="width: 50px;">农场</label>
-																<div class="controls" style="margin-left: 55px;">
+																<label class="control-label" style="width: 30px;">公司</label>
+																<div class="controls" style="margin-left: 35px;">
+																	<select id="companyId" class="m-wrap span12" tabindex="1" name="companyId">
+			 															<option value="">中粮肉食投资有限公司</option>  
+																	</select>
+																</div>
+															</div>
+														</div>
+														
+														<div class="span3" style="width: 220px;">
+															<div class="control-group">
+																<label class="control-label" style="width: 30px;">基地</label>
+																<div class="controls" style="margin-left: 35px;">
+																	<select id="jidiId" class="m-wrap span12" tabindex="1" name="jidiId">
+			 															<option value="">吉林养殖</option>  
+																	</select>
+																</div>
+															</div>
+														</div>
+                                                        
+                                                        <div class="span3" style="width: 220px;">
+															<div class="control-group">
+																<label class="control-label" style="width: 30px;">农场</label>
+																<div class="controls" style="margin-left: 35px;">
 																	<select id="farmId2" class="m-wrap span12" tabindex="1" name="farmId2" onchange="reflushAlarmHist(2);">
 																		 <c:if test="${!empty farmList}">
 																		 <c:forEach var="farm" items="${farmList}">
@@ -133,7 +178,7 @@
 
 														
 
-														<div class="span3">
+														<div class="span3" style="width: 220px;">
 
 															<div class="control-group">
 																<label class="control-label" style="width: 30px;">栋舍</label>
@@ -150,7 +195,7 @@
 
 														</div>
 
-														<div class="span3">
+														<div class="span3" style="width: 220px;">
 															<div class="control-group">
 																<label class="control-label" style="width: 30px;">批次</label>
 																<div class="controls" style="margin-left: 35px;">
@@ -165,7 +210,7 @@
 															</div>
 														</div>
 														
-														<div class="span3">
+														<div class="span3" style="width: 220px;">
 															<div class="control-group">
 																<label class="control-label" style="width: 60px;">起始时间</label>
 																<div class="controls" style="margin-left: 65px;">
@@ -176,7 +221,7 @@
 															</div>
 														</div>
 														
-														<div class="span3">
+														<div class="span3" style="width: 220px;">
 															<div class="control-group">
 																<label class="control-label" style="width: 60px;">截止时间</label>
 																<div class="controls" style="margin-left: 65px;">
@@ -187,7 +232,7 @@
 															</div>
 														</div>
 														
-														<div class="span3">
+														<div class="span3" style="width: 220px;">
 															<div class="control-group">
 																<label class="control-label" style="width: 60px;">报警类型</label>
 																<div class="controls" style="margin-left: 65px;">
@@ -391,14 +436,14 @@
 										
 										<tbody id="tbodyAlarmHistDetailList">
 										<c:if test="${!empty AlarmHistDetail}">
-											<c:forEach var="bl" items="${AlarmHistDetail}" varStatus="vs">
+											<c:forEach var="bl" items="${AlarmHistDetail}">
 											<tr class="odd gradeX">
 											    <td>${bl.date_age}</td>
 												<td>${bl.alarm_time}</td>
 												<td>${bl.alarm_Name}</td>
 												<td>${bl.set_value}</td>
 												<td>${bl.actual_value}</td>
-												<td>${bl.continue_time}分钟</td> 
+												<td>${bl.continue_time}</td> 
 												<td>${bl.response_person}</td>
 											</tr>
 											</c:forEach>

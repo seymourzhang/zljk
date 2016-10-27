@@ -54,6 +54,10 @@ var outsideTemp = new Array();//室外温度
 			<div id="page-content" class="clearfix"  style="padding-top: 10px;"> 
 				<div class="row-fluid" style="background-color: #ffffff;">
 					<form  method="post" style="background-color: #ffffff;">
+					<input type="hidden" name="farmId2" value="" id="farmId2">
+					<input type="hidden" name="houseId2" value="" id="houseId2">
+					<input type="hidden" name="batchId2" value="" id="batchId2">
+					<input type="hidden" name="queryTime2" value="" id="queryTime2">
 					  <div class="span12">
 							<!-- BEGIN PORTLET-->
 							<div class="portlet box blue1">
@@ -160,6 +164,12 @@ var outsideTemp = new Array();//室外温度
 											</div>
 
 											<!--/span-->
+											
+											<!-- 对比 -->
+										       <div style="margin-left: 80px; float:left">
+						                          <input id="btn" type="button" onclick="tempCompareUrl();" value="对比">
+									           </div>
+											<!-- /对比 -->
 
 										</div>
 
@@ -202,6 +212,37 @@ var outsideTemp = new Array();//室外温度
 									</div>
 								</div>
 							</div>
+							
+							<div id="tempRep" style="display:none;" class="portlet box blue1">
+								<div class="portlet-title">
+									<div class="caption">
+										<i class="icon-globe"></i>对比曲线图
+									</div>
+								</div>
+
+								<div class="portlet-body" id="user_date_table" style="padding-bottom: 30px;">
+									<input type="hidden" name="btValue" id="btValue">
+									<div id="compareRep" class="form-horizontal" ></div>
+									<div class="portlet-body form1"> 
+										<div class="span4">
+											<div class="control-group" style="padding-left: 100px;">
+												<input type="button"  style="width: 80px;" value="近一个月" onclick="javascript:btMonth();">
+											</div>
+										</div>
+										<div class="span4">
+											<div class="control-group" style="padding-left: 100px;">
+												<input type="button"  style="width: 80px;" value="近一周" onclick="javascript:btWeek();">
+											</div>
+										</div>
+										<div class="span4">
+											<div class="control-group" style="padding-left: 100px;">
+												<input type="button"  style="width: 80px;" value="当日" onclick="javascript:btDay();">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
 						</div>
 					</form>
 				</div> 

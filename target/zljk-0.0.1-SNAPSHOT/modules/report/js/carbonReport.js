@@ -1,4 +1,6 @@
 var tickInterval=2;
+var count0rg;
+var num;
 
 $(document).ready(function(){
 	 $('.date-picker').datepicker({
@@ -12,18 +14,13 @@ $(document).ready(function(){
 	 $("#page-content").css("min-height",win_h);
 	 $("#container").css("height",win_h-50);
 	 
-	 $("#btn").click(function(){
-		    var div = $("#carbonRep");
-		        div.show();
-		})
-	 
-	   $("#farmId").change(function() {
-		 setHouseId();
-		});
-
-		$("#houseId").change(function() {
-			setBatchId();
-		});
+//	   $("#farmId").change(function() {
+//		 setHouseId();
+//		});
+//
+//		$("#houseId").change(function() {
+//			setBatchId();
+//		});
 		$("#batchId").change(function() {
 			queryCarbonReport();
 		});
@@ -40,56 +37,67 @@ $(document).ready(function(){
 		}
 		document.getElementById("queryTime").value = time();
 		
-	 setHouseId();
+//	 setHouseId();
 	 createChar();
 	});
 
-
-  function setHouseId(){
-	 $.ajax({
-		type : "post",
-		url : path + "/carbonReport/getHouse",
-		data : {
-			"farmId" : $("#farmId").val()
-		},
-		dataType: "json",
-		success : function(result) {
-			var list = result.obj;
-			$("#houseId option").remove();
-			for (var i = 0; i < list.length; i++) {
-				$("#houseId").append("<option value=" + list[i].id + ">" + list[i].house_name+ "</option>");
-			}
-			if (houseId != ''){
-				$("#houseId").val(houseId);
-			}else{
-				$("#houseId").val(list[0].id);
-			}
-			setBatchId();
-			queryCarbonReport();
-		}
-	})
+function OrgSearch(count0rg,num){
+	queryCarbonReport();
 }
 
-function setBatchId(){
-	$.ajax({
-		type : "post",
-		url : path + "/carbonReport/getBatch",
-		data : {
-			"farmId" : $("#farmId").val(),
-			"houseId" : $("#houseId").val()
-		},
-		dataType: "json",
-		success : function(result) {
-			var list = result.obj;
-			$("#batchId option").remove();
-			for (var i = 0; i < list.length; i++) {
-				$("#batchId").append("<option value=" + list[i].batch_no + ">" + list[i].batch_no + "</option>");
-			}
-			$("#batchId").val(list[0].batch_no);
-			queryCarbonReport();
-		}
-	})
+function show(){
+	document.getElementById("carbonRep").style.display="block";
 }
+
+function hidden(){
+	document.getElementById("carbonRep").style.display="none";
+}
+
+//  function setHouseId(){
+//	 $.ajax({
+//		type : "post",
+//		url : path + "/carbonReport/getHouse",
+//		data : {
+//			"farmId" : $("#farmId").val()
+//		},
+//		dataType: "json",
+//		success : function(result) {
+//			var list = result.obj;
+//			$("#houseId option").remove();
+//			for (var i = 0; i < list.length; i++) {
+//				$("#houseId").append("<option value=" + list[i].id + ">" + list[i].house_name+ "</option>");
+//			}
+//			if (houseId != ''){
+//				$("#houseId").val(houseId);
+//			}else{
+//				$("#houseId").val(list[0].id);
+//			}
+//			setBatchId();
+//			queryCarbonReport();
+//		}
+//	})
+//}
+
+//function setBatchId(){
+//	$.ajax({
+//		type : "post",
+//		url : path + "/carbonReport/getBatch",
+//		data : {
+//			"farmId" : $("#farmId").val(),
+//			"houseId" : $("#houseId").val()
+//		},
+//		dataType: "json",
+//		success : function(result) {
+//			var list = result.obj;
+//			$("#batchId option").remove();
+//			for (var i = 0; i < list.length; i++) {
+//				$("#batchId").append("<option value=" + list[i].batch_no + ">" + list[i].batch_no + "</option>");
+//			}
+//			$("#batchId").val(list[0].batch_no);
+//			queryCarbonReport();
+//		}
+//	})
+//}
 
 function carbonUrl() {
 	layer.open({
@@ -108,8 +116,8 @@ function  queryCarbonReport(){
 		type : "post",
 		url : path + "/carbonReport/queryCarbonReport",
 		data : {
-			"farmId" : $("#farmId").val(),//农场
-			"houseId" : $("#houseId").val(),//栋舍
+			"farmId" : $("#orgId"+(count0rg-1)).val().split(",")[1],//农场
+			"houseId" : $("#orgId"+count0rg).val().split(",")[1],//栋舍
 			"batchId" : $("#batchId").val(),//批次
 			"queryTime" : $("#queryTime").val(),//日期
 			"buttonValue" : $("#buttonValue").val()//点击按钮值

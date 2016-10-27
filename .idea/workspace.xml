@@ -5,7 +5,40 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/monitor/action/MonitorAction.java" line="252" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="49b3aea4-f599-4a24-a58c-2fec1f06be93" name="Default" comment="" />
+    <list default="true" readonly="true" id="49b3aea4-f599-4a24-a58c-2fec1f06be93" name="Default" comment="弹框--报警设置">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mtc/zljk/util/service/OrganService.java" afterPath="$PROJECT_DIR$/src/main/java/com/mtc/zljk/util/service/OrganService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mtc/zljk/util/service/impl/OrganServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/mtc/zljk/util/service/impl/OrganServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/util/SDOrganizationMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/util/SDOrganizationMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/pom.xml" afterPath="$PROJECT_DIR$/zljk/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/java/com/mtc/zljk/report/action/NegativePressureAction.java" afterPath="$PROJECT_DIR$/zljk/src/main/java/com/mtc/zljk/report/action/NegativePressureAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/java/com/mtc/zljk/report/action/TemProfileAction.java" afterPath="$PROJECT_DIR$/zljk/src/main/java/com/mtc/zljk/report/action/TemProfileAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/java/com/mtc/zljk/util/service/OrganService.java" afterPath="$PROJECT_DIR$/zljk/src/main/java/com/mtc/zljk/util/service/OrganService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/java/com/mtc/zljk/util/service/impl/OrganServiceImpl.java" afterPath="$PROJECT_DIR$/zljk/src/main/java/com/mtc/zljk/util/service/impl/OrganServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/resources/mybatis/util/SDOrganizationMapper.xml" afterPath="$PROJECT_DIR$/zljk/src/main/resources/mybatis/util/SDOrganizationMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/framework/js/org.js" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/framework/js/org.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/alarm/alarm.jsp" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/alarm/alarm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/alarm/alarmCurr.jsp" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/alarm/alarmCurr.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/alarm/js/alarmCurr.js" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/alarm/js/alarmCurr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/monitor/js/monitor.js" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/monitor/js/monitor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/monitor/js/videoMonitor.js" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/monitor/js/videoMonitor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/monitor/monitor.jsp" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/monitor/monitor.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/monitor/videoMonitor.jsp" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/monitor/videoMonitor.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/alarmHist.jsp" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/alarmHist.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/carbonCompare.jsp" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/carbonCompare.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/carbonReport.jsp" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/carbonReport.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/humiCompare.jsp" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/humiCompare.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/humidityReport.jsp" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/humidityReport.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/js/alarmHist.js" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/js/alarmHist.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/js/carbonReport.js" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/js/carbonReport.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/js/humidityReport.js" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/js/humidityReport.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/js/negativePressure.js" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/js/negativePressure.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/js/temProfile.js" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/js/temProfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/js/waterReport.js" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/js/waterReport.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/negativePressure.jsp" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/negativePressure.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/temProfile.jsp" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/temProfile.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/waterCompare.jsp" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/waterCompare.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/waterReport.jsp" afterPath="$PROJECT_DIR$/zljk/src/main/webapp/modules/report/waterReport.jsp" />
+    </list>
     <ignored path="zljk.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,6 +64,16 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - zljk_dev@121.196.237.126" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -38,137 +81,125 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OperationMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/monitor/OperationMapper.xml">
+      <file leaf-file-name="SDTaskMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/product/SDTaskMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="743">
-              <caret line="82" column="61" selection-start-line="82" selection-start-column="61" selection-end-line="82" selection-end-column="61" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1476358971660" expanded="true" signature="346:771" ph="SELECT id, o... s_d_organization" />
-                <marker date="1476358971660" expanded="true" signature="858:1107" ph="SELECT id, o... s_d_organization" />
-                <marker date="1476358971660" expanded="true" signature="1223:1509" ph="SELECT id, o... s_d_organization" />
-                <marker date="1476358971660" expanded="true" signature="1223:1640" ph="SELECT id, o... s_d_organization" />
-                <marker date="1476358971660" expanded="true" signature="1747:2071" ph="SELECT * FRO... s_d_organization" />
-                <marker date="1476358971660" expanded="true" signature="1747:2711" ph="SELECT * FRO... " />
-                <marker date="1476358971660" expanded="true" signature="1815:2053" ph="SELECT paren... s_d_organization" />
-                <marker date="1476358971660" expanded="true" signature="1815:2070" ph="SELECT paren... s_d_organization" />
-                <marker date="1476358971660" expanded="true" signature="2098:2711" ph="SELECT * FRO... s_d_organization" />
-                <marker date="1476358971660" expanded="true" signature="2170:2710" ph="SELECT paren... s_d_organization" />
-                <marker date="1476358971660" expanded="true" signature="2288:2692" ph="SELECT paren... s_d_organization" />
-                <marker date="1476358971660" expanded="true" signature="2288:2709" ph="SELECT paren... s_d_organization" />
+                <marker date="1477387184164" expanded="true" signature="341:520" ph="SELECT t.tas... s_d_task" />
+                <marker date="1477387184164" expanded="true" signature="631:1081" ph="SELECT t.tas... s_d_task" />
+                <marker date="1477387184164" expanded="true" signature="1172:1242" ph="SELECT biz_c... s_d_code" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="monitor.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/monitor/js/monitor.js">
+      <file leaf-file-name="FarmTaskService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/product/service/FarmTaskService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="790">
-              <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1476337665966" expanded="true" signature="2949:2960" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="3217:3248" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="3321:3352" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="3455:3486" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="3615:3646" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="3753:3833" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="3931:3993" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="4158:4189" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="4302:4333" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="4455:4486" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="4593:4624" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="4776:4807" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="4911:4942" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="5046:5077" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="5181:5244" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="5348:5379" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="5490:5521" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="5678:5709" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="5824:5855" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="6031:6062" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="6179:6210" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="6341:6372" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="6446:6477" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="6550:6581" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="6660:6691" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="6767:6798" ph="..." />
-                <marker date="1476337665966" expanded="true" signature="6880:6911" ph="..." />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OperationService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/monitor/service/OperationService.java">
+      <file leaf-file-name="TaskServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/product/service/impl/TaskServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="monitorSet.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/monitor/monitorSet.jsp">
+      <file leaf-file-name="TaskService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/product/service/TaskService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="724">
-              <caret line="116" column="10" selection-start-line="116" selection-start-column="10" selection-end-line="116" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7feb5db1-d73f-46e4-bce0-6857dc10d9f6/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="monitor.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/monitor/monitor.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2470">
-              <caret line="148" column="83" selection-start-line="148" selection-start-column="67" selection-end-line="148" selection-end-column="83" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userManage.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/user/userManage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/user/action/RoleAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="771">
-              <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserFilterService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/monitor/service/UserFilterService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="imports" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MissionRemindAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/product/action/MissionRemindAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FarmTaskServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/product/service/impl/FarmTaskServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="missionRemind.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/product/js/missionRemind.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SDOrganizationMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/util/SDOrganizationMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1477275279700" expanded="true" signature="320:963" ph="select d.id,... s_d_organization" />
+                <marker date="1477275279700" expanded="true" signature="1061:1505" ph="select d.id,... s_d_organization" />
+                <marker date="1477275279700" expanded="true" signature="1606:2255" ph="select u.id s_d_user" />
+                <marker date="1477275279700" expanded="true" signature="2175:2219" ph="select max(l... s_d_organization" />
+                <marker date="1477275279700" expanded="true" signature="2366:3119" ph="select u.id s_d_user" />
+                <marker date="1477275279700" expanded="true" signature="3044:3088" ph="select max(l... s_d_organization" />
+                <marker date="1477275279700" expanded="true" signature="3225:3892" ph="select u.id s_d_user" />
+                <marker date="1477275279700" expanded="true" signature="3790:3832" ph="select max(l... s_d_organization" />
+                <marker date="1477275279700" expanded="true" signature="3991:4484" ph="select d.id,... s_d_organization" />
+                <marker date="1477275279700" expanded="true" signature="4377:4429" ph="select max(a... s_d_organization" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrganServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/util/service/impl/OrganServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrganService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/util/service/OrganService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -205,10 +236,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/monitor/OperationMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/mtc/zljk/monitor/service/impl/UserFilterServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mtc/zljk/monitor/service/UserFilterService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/modules/user/userManage.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/mtc/zljk/user/action/RoleAction.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/modules/monitor/monitor.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/modules/monitor/monitorSet.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/modules/user/userManage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mtc/zljk/util/service/impl/OrganServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mtc/zljk/util/service/OrganService.java" />
       </list>
     </option>
   </component>
@@ -263,6 +296,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -291,172 +327,369 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zljk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_zl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zljk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_zl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zljk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_zl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zljk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_zl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zljk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_zl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zljk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_zl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zljk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_zl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mybatis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zljk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_zl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zljk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_zl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zljk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zljk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_zl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zljk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zljk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_zl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zljk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zljk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_zl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zljk" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/taobao-source-1.0.0.RELEASE-sources.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="SearchEverywhereHistoryKey" value="form-actions&#9;null&#9;null&#10;selectByConditionMy&#9;PSI&#9;JAVA://com.mtc.zljk.monitor.service.UserFilterService#selectByConditionMy&#10;selectAll&#9;PSI&#9;JAVA://com.mtc.zljk.alarm.service.AlarmCurrService#selectAll&#10;getOrgByRoleId&#9;PSI&#9;JAVA://com.mtc.zljk.user.action.RoleAction#getOrgByRoleId&#10;PubF&#9;PSI&#9;JAVA://com.mtc.zljk.util.common.PubFun" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Project_zl\src\main\resources\mybatis\util" />
+      <recent name="F:\Project_zl\src\main\webapp\modules" />
+      <recent name="F:\Project_zl\src\main\java\com\mtc\zljk" />
+      <recent name="F:\Project_zl\src\main\resources\mybatis" />
+      <recent name="F:\Project_zl\src\main\webapp\modules\monitor" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mtc.zljk.util.service" />
+      <recent name="com.mtc.zljk.util.service.impl" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Project_zl\src\main\webapp\modules\monitor" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Project_zl\src\main\webapp\modules\monitor" />
-      <recent name="F:\Project_zl\src\main\webapp\modules\monitor\js" />
-      <recent name="F:\Project_zl\target\zljk-0.0.1-SNAPSHOT\modules\monitor\js" />
-      <recent name="F:\Project_zl\target\zljk-0.0.1-SNAPSHOT\modules\monitor" />
-    </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\java\com\mtc\zljk\report\action\HumidityReportAction.java</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\java\com\mtc\zljk\report\action\CarbonReportAction.java</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\java\com\mtc\zljk\report\action\WaterReportAction.java</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\java\com\mtc\zljk\system\entity\SDMenu.java</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\java\com\mtc\zljk\farm\action\FarmAction.java</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\webapp\modules\report\js\carbonReport.js</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\webapp\modules\report\js\humidityReport.js</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\webapp\modules\report\js\waterReport.js</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\webapp\modules\report\js\temProfile.js</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\webapp\modules\report\carbonReport.jsp</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\webapp\modules\report\humidityReport.jsp</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\webapp\modules\report\waterReport.jsp</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\webapp\modules\alarm\alarm.jsp</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\webapp\modules\alarm\js\alarm.js</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\webapp\modules\farm\addBatch.jsp</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\webapp\modules\farm\farmView.jsp</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\webapp\framework\js\head.js</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\webapp\framework\layer\skin\layer.css</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\webapp\framework\left.jsp</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\resources\mybatis\system\SDMenuMapper.xml</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\webapp\modules\report\carbonCompare.jsp</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\webapp\modules\report\humiCompare.jsp</PATH>
-          <PATH vcs="svn" revision="632">F:\Project_zl\src\main\webapp\modules\report\waterCompare.jsp</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-        <PATH vcs="svn" revision="632">F:\Project_zl\src\main\webapp\modules\user\userManage.jsp</PATH>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat">
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
@@ -996,7 +1229,10 @@
       <workItem from="1475980415093" duration="48750000" />
       <workItem from="1476152600375" duration="19821000" />
       <workItem from="1476239819663" duration="25936000" />
-      <workItem from="1476324723663" duration="36751000" />
+      <workItem from="1476324723663" duration="39586000" />
+      <workItem from="1476679167893" duration="2389000" />
+      <workItem from="1476695857891" duration="2410000" />
+      <workItem from="1477466536740" duration="2456000" />
     </task>
     <task id="LOCAL-00001" summary="弹框--报警设置">
       <created>1476414328786</created>
@@ -1009,7 +1245,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131258000" />
+    <option name="totallyTimeSpent" value="141348000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1029,11 +1265,10 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55362946" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19083156" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19029851" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15298508" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15245202" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1046,6 +1281,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55362946" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1118,92 +1354,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.0.6.RELEASE/spring-web-4.0.6.RELEASE-sources.jar!/org/springframework/web/filter/OncePerRequestFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="109" column="75" selection-start-line="109" selection-start-column="75" selection-end-line="109" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/user/filter/LoginFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.0.6.RELEASE/spring-webmvc-4.0.6.RELEASE-sources.jar!/org/springframework/web/servlet/FrameworkServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="838" column="0" selection-start-line="838" selection-start-column="0" selection-end-line="838" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/monitor/videoMonitor.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1148">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/farm/addFarm.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="184" column="61" selection-start-line="184" selection-start-column="51" selection-end-line="184" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/farm/action/FarmAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="123" column="32" selection-start-line="123" selection-start-column="22" selection-end-line="123" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.0.6.RELEASE/spring-aop-4.0.6.RELEASE-sources.jar!/org/springframework/aop/framework/CglibAopProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="614" column="0" selection-start-line="614" selection-start-column="0" selection-end-line="614" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/zljk-0.0.1-SNAPSHOT/modules/monitor/monitor.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/zljk-0.0.1-SNAPSHOT/modules/monitor/js/monitor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="213" column="62" selection-start-line="213" selection-start-column="61" selection-end-line="213" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/zljk-0.0.1-SNAPSHOT/modules/monitor/js/monitorSet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-741">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/zljk-0.0.1-SNAPSHOT/modules/monitor/monitorSet.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-893">
-          <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/monitor/monitorSet1.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/monitor/js/monitorSet1.js" />
     <entry file="jar://E:/Tools/jdk1.8.0_77/src.zip!/java/io/Serializable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1084">
           <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1211,7 +1367,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="111" column="31" selection-start-line="111" selection-start-column="31" selection-end-line="111" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1226,39 +1381,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="790">
           <caret line="283" column="4" selection-start-line="283" selection-start-column="4" selection-end-line="283" selection-end-column="4" />
-          <folding>
-            <element signature="docComment;class#PubFun#0" expanded="false" />
-            <element signature="docComment;method#getCurrentDate#0;class#PubFun#0" expanded="false" />
-            <element signature="method#getCurrentDate#0;class#PubFun#0" expanded="false" />
-            <element signature="docComment;method#getCurrentTime#0;class#PubFun#0" expanded="false" />
-            <element signature="method#getCurrentTime#0;class#PubFun#0" expanded="false" />
-            <element signature="docComment;method#getCurrentDate2#0;class#PubFun#0" expanded="false" />
-            <element signature="method#getCurrentDate2#0;class#PubFun#0" expanded="false" />
-            <element signature="docComment;method#getCurrentTime2#0;class#PubFun#0" expanded="false" />
-            <element signature="method#getCurrentTime2#0;class#PubFun#0" expanded="false" />
-            <element signature="docComment;method#getDate#0;class#PubFun#0" expanded="false" />
-            <element signature="method#getDate#0;class#PubFun#0" expanded="false" />
-            <element signature="docComment;method#getWEBINFpath#0;class#PubFun#0" expanded="false" />
-            <element signature="method#getWEBINFpath#0;class#PubFun#0" expanded="false" />
-            <element signature="docComment;method#daysBetween#0;class#PubFun#0" expanded="false" />
-            <element signature="method#daysBetween#0;class#PubFun#0" expanded="false" />
-            <element signature="method#addDate#0;class#PubFun#0" expanded="false" />
-            <element signature="method#addDate#1;class#PubFun#0" expanded="false" />
-            <element signature="method#convertResult2Array#0;class#PubFun#0" expanded="false" />
-            <element signature="method#getRequestPara#0;class#PubFun#0" expanded="false" />
-            <element signature="method#getRequestPara#1;class#PubFun#0" expanded="false" />
-            <element signature="method#isNull#0;class#PubFun#0" expanded="false" />
-            <element signature="method#getBigDecimalData#0;class#PubFun#0" expanded="false" />
-            <element signature="method#getDoubleData#0;class#PubFun#0" expanded="false" />
-            <element signature="method#getIntegerData#0;class#PubFun#0" expanded="false" />
-            <element signature="docComment;method#formatDoubleNum#0;class#PubFun#0" expanded="false" />
-            <element signature="method#formatDoubleNum#0;class#PubFun#0" expanded="false" />
-            <element signature="method#fillLeftChar#0;class#PubFun#0" expanded="false" />
-            <element signature="docComment;method#getWeekAge#0;class#PubFun#0" expanded="false" />
-            <element signature="method#getWeekAge#0;class#PubFun#0" expanded="false" />
-            <element signature="method#getPropertyValue#0;class#PubFun#0" expanded="false" />
-            <element signature="method#main#0;class#PubFun#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1266,10 +1388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="87" column="11" selection-start-line="87" selection-start-column="11" selection-end-line="87" selection-end-column="11" />
-          <folding>
-            <element signature="e#2871#2872#0" expanded="false" />
-            <element signature="e#2896#2897#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1277,7 +1395,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="625" column="16" selection-start-line="625" selection-start-column="16" selection-end-line="625" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1285,7 +1402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1178">
           <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1293,7 +1409,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1301,7 +1416,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="818">
           <caret line="1" column="12185" selection-start-line="1" selection-start-column="12185" selection-end-line="1" selection-end-column="12185" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1309,7 +1423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1317,7 +1430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1325,7 +1437,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1053">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1349,7 +1460,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1482">
           <caret line="174" column="43" selection-start-line="174" selection-start-column="43" selection-end-line="174" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1357,11 +1467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1476065190920" expanded="true" signature="307:1001" ph="SELECT ac.fa... s_b_alarm_inco" />
-            <marker date="1476065190920" expanded="true" signature="1121:2120" ph="SELECT ac.fa... s_b_alarm_inco" />
-            <marker date="1476065190920" expanded="true" signature="2298:2706" ph="update s_b_a... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1369,7 +1474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1377,7 +1481,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="224" column="0" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1385,7 +1488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
           <caret line="951" column="0" selection-start-line="951" selection-start-column="0" selection-end-line="951" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1393,11 +1495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-          <folding>
-            <marker date="1476350704842" expanded="true" signature="323:433" ph="SELECT house... s_d_user_filter" />
-            <marker date="1476350704842" expanded="true" signature="537:904" ph="INSERT INTO s_d_user_filter... " />
-            <marker date="1476350704842" expanded="true" signature="1010:1140" ph="UPDATE s_d_u... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1405,7 +1502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1413,24 +1509,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/monitor/js/monitorSet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/monitor/js/monitorSet.js" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/monitor/action/MonitorAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4106">
           <caret line="336" column="0" selection-start-line="336" selection-start-column="0" selection-end-line="336" selection-end-column="0" />
           <folding>
-            <element signature="e#7515#7525#0" expanded="true" />
+            <element signature="e#7515#7525#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1439,7 +1527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="524">
           <caret line="261" column="18" selection-start-line="261" selection-start-column="18" selection-end-line="261" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1447,7 +1534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
           <caret line="1111" column="7" selection-start-line="1111" selection-start-column="7" selection-end-line="1111" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1455,9 +1541,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1465,33 +1548,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/monitor/service/OperationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/monitor/service/UserFilterService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/monitor/OperationMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
+        <state relative-caret-position="1558">
           <caret line="82" column="61" selection-start-line="82" selection-start-column="61" selection-end-line="82" selection-end-column="61" />
           <folding>
             <marker date="1476358971660" expanded="true" signature="346:771" ph="SELECT id, o... s_d_organization" />
@@ -1510,74 +1572,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/user/userManage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/user/action/RoleAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
+        <state relative-caret-position="988">
           <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/monitor/js/monitor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+        <state relative-caret-position="4408">
+          <caret line="232" column="0" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
           <folding>
-            <marker date="1476337665966" expanded="true" signature="2949:2960" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="3217:3248" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="3321:3352" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="3455:3486" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="3615:3646" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="3753:3833" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="3931:3993" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="4158:4189" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="4302:4333" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="4455:4486" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="4593:4624" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="4776:4807" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="4911:4942" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="5046:5077" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="5181:5244" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="5348:5379" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="5490:5521" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="5678:5709" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="5824:5855" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="6031:6062" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="6179:6210" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="6341:6372" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="6446:6477" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="6550:6581" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="6660:6691" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="6767:6798" ph="..." />
-            <marker date="1476337665966" expanded="true" signature="6880:6911" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="3265:3276" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="3533:3564" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="3637:3668" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="3771:3802" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="3931:3962" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="4069:4149" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="4247:4309" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="4474:4505" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="4618:4649" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="4771:4802" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="4909:4940" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="5092:5123" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="5227:5258" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="5362:5393" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="5497:5560" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="5664:5695" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="5806:5837" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="5994:6025" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="6140:6171" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="6347:6378" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="6495:6526" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="6657:6688" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="6762:6793" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="6866:6897" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="6976:7007" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="7083:7114" ph="..." />
+            <marker date="1476695867187" expanded="true" signature="7196:7227" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/monitor/image/glyphicons-halflings.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/monitor/service/OperationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/user/userManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="79" column="170" selection-start-line="79" selection-start-column="170" selection-end-line="79" selection-end-column="170" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/monitor/monitor.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2470">
-          <caret line="148" column="83" selection-start-line="148" selection-start-column="67" selection-end-line="148" selection-end-column="83" />
-          <folding />
+        <state relative-caret-position="665">
+          <caret line="294" column="0" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/monitor/image/glyphicons-halflings.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/monitor/service/UserFilterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/zljk_dev_s_b_monitor_hist.sql" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/monitor/monitorSet.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
+        <state relative-caret-position="2204">
           <caret line="116" column="10" selection-start-line="116" selection-start-column="10" selection-end-line="116" selection-end-column="10" />
           <folding />
         </state>
@@ -1585,8 +1663,111 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7feb5db1-d73f-46e4-bce0-6857dc10d9f6/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+        <state relative-caret-position="323">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/product/SDTaskMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1477387184164" expanded="true" signature="341:520" ph="SELECT t.tas... s_d_task" />
+            <marker date="1477387184164" expanded="true" signature="631:1081" ph="SELECT t.tas... s_d_task" />
+            <marker date="1477387184164" expanded="true" signature="1172:1242" ph="SELECT biz_c... s_d_code" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/product/service/FarmTaskService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/product/service/impl/TaskServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/product/service/TaskService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/product/action/MissionRemindAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/product/service/impl/FarmTaskServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/modules/product/js/missionRemind.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/util/SDOrganizationMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1477275279700" expanded="true" signature="320:963" ph="select d.id,... s_d_organization" />
+            <marker date="1477275279700" expanded="true" signature="1061:1505" ph="select d.id,... s_d_organization" />
+            <marker date="1477275279700" expanded="true" signature="1606:2255" ph="select u.id s_d_user" />
+            <marker date="1477275279700" expanded="true" signature="2175:2219" ph="select max(l... s_d_organization" />
+            <marker date="1477275279700" expanded="true" signature="2366:3119" ph="select u.id s_d_user" />
+            <marker date="1477275279700" expanded="true" signature="3044:3088" ph="select max(l... s_d_organization" />
+            <marker date="1477275279700" expanded="true" signature="3225:3892" ph="select u.id s_d_user" />
+            <marker date="1477275279700" expanded="true" signature="3790:3832" ph="select max(l... s_d_organization" />
+            <marker date="1477275279700" expanded="true" signature="3991:4484" ph="select d.id,... s_d_organization" />
+            <marker date="1477275279700" expanded="true" signature="4377:4429" ph="select max(a... s_d_organization" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/util/service/impl/OrganServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mtc/zljk/util/service/OrganService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1650,7 +1831,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

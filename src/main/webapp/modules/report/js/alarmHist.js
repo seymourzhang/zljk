@@ -49,6 +49,40 @@ function setBatchId(){
 				$("#batchId").append("<option value=" + list[i].batch_no+ ">" + list[i].batch_no + "</option>");
 			}
 			$("#batchId").val(list[0].batch_no);
+			
+			$.ajax({                              
+		        // async: true,
+		        url: path+"/alarmHist/queryAlarmHist2",
+		        data: {
+					"farmId" : $("#farmId").val(),"houseId":$("#houseId").val(),"batchNo":$("#batchId").val()
+				},
+		        type: "POST",
+		        dataType: "json",
+		        cache: false,
+		        // timeout:50000,
+		        success: function (result) {
+		            var list = eval(result.obj);
+		            $("#tbodyAlarmHistList tr").remove();
+		            for (var i = 0; i < list.length; i++) {
+		                var str = '';
+		                var strForward = "\"forward("+list[i]["farm_id"]+","+list[i]["house_id"]+","+list[i]["date_age"]+","+list[i]["batch_no"]+",'"+list[i]["date"]+"');\"";
+		                str += "<tr style='height:30px' onclick="+strForward+">";
+		                str += "<td style='height:30px;'>" + list[i]["farm_name"] + "</td>";
+		                str += "<td style='height:30px;'>" + list[i]["house_name"] + "</td>";
+		                str += "<td style='height:30px;'>" + list[i]["date_age"] + "</td>";
+		                str += "<td style='height:30px;'>" + list[i]["high_temp_num"] + "</td>";
+		                str += "<td style='height:30px;'>" + list[i]["low_temp_num"] + "</td>";
+		                str += "<td style='height:30px;'>" + list[i]["high_negative_pressure_num"] + "</td>";
+		                str += "<td style='height:30px;'>" + list[i]["low_negative_pressure_num"] + "</td>";
+		                str += "<td style='height:30px;'>" + list[i]["high_co2_num"] + "</td>";
+		                str += "<td style='height:30px;'>" + list[i]["high_water_num"] + "</td>";
+		                str += "<td style='height:30px;'>" + list[i]["low_water_num"] + "</td>";
+		                $("#tbodyAlarmHistList").append(str);
+		            }
+
+		        }
+		    });
+			
 		}
 	});
 }
@@ -69,6 +103,56 @@ function setBatchId2(){
 				$("#batchId2").append("<option value=" + list[i].batch_no+ ">" + list[i].batch_no + "</option>");
 			}
 			$("#batchId2").val(list[0].batch_no);
+			
+			var param;
+			if($("#beginTime").val()=="" && $("#endTime").val()==""){
+				param={
+						"farmId2" : $("#farmId2").val(),"houseId2":$("#houseId2").val(),"batchNo2":$("#batchId2").val(),"bizCode":$("#bizCode").val()
+					};
+			}else if($("#beginTime").val()=="" && $("#endTime").val()!=""){
+				param = {
+						"farmId2" : $("#farmId2").val(),"houseId2":$("#houseId2").val(),"batchNo2":$("#batchId2").val(),"endTime":$("#endTime").val(),
+						"bizCode":$("#bizCode").val()
+				};
+			}else if($("#beginTime").val()!="" && $("#endTime").val()==""){
+				param = {
+						"farmId2" : $("#farmId2").val(),"houseId2":$("#houseId2").val(),"batchNo2":$("#batchId2").val(),"beginTime":$("#beginTime").val(),
+						"bizCode":$("#bizCode").val()
+				};
+			}else{
+				param = {
+						"farmId2" : $("#farmId2").val(),"houseId2":$("#houseId2").val(),"batchNo2":$("#batchId2").val(),"beginTime":$("#beginTime").val(),
+						"endTime":$("#endTime").val(),"bizCode":$("#bizCode").val()
+					};
+			}
+			
+			$.ajax({                              
+		        // async: true,
+		        url: path+"/alarmHist/queryAlarmHist3",
+		        data: param,
+		        type: "POST",
+		        dataType: "json",
+		        cache: false,
+		        // timeout:50000,
+		        success: function (result) {
+		        	var list = eval(result.obj);
+		            $("#tbodyAlarmHistDetailList tr").remove();
+		            for (var i = 0; i < list.length; i++) {
+		                var str = '';
+		                str += "<tr style='height:30px' >";
+		                str += "<td style='height:30px;'>" + list[i]["date_age"] + "</td>";
+		                str += "<td style='height:30px;'>" + list[i]["alarm_time"] + "</td>";
+		                str += "<td style='height:30px;'>" + list[i]["alarm_Name"] + "</td>";
+		                str += "<td style='height:30px;'>" + list[i]["set_value"] + "</td>";
+		                str += "<td style='height:30px;'>" + list[i]["actual_value"] + "</td>";
+		                str += "<td style='height:30px;'>" + list[i]["continue_time"] + "分钟</td>";
+		                str += "<td style='height:30px;'>" + list[i]["response_person"] + "</td>";
+		                $("#tbodyAlarmHistDetailList").append(str);
+		            }
+
+		        }
+		    });
+			
 		}
 	});
 }
@@ -155,39 +239,6 @@ function reflushAlarmHist(num){
 			}
 			setBatchId();
 			
-			$.ajax({                              
-		        // async: true,
-		        url: path+"/alarmHist/queryAlarmHist2",
-		        data: {
-					"farmId" : $("#farmId").val(),"houseId":$("#houseId").val(),"batchNo":$("#batchId").val()
-				},
-		        type: "POST",
-		        dataType: "json",
-		        cache: false,
-		        // timeout:50000,
-		        success: function (result) {
-		            var list = eval(result.obj);
-		            $("#tbodyAlarmHistList tr").remove();
-		            for (var i = 0; i < list.length; i++) {
-		                var str = '';
-		                var strForward = "\"forward("+list[i]["farm_id"]+","+list[i]["house_id"]+","+list[i]["date_age"]+","+list[i]["batch_no"]+",'"+list[i]["date"]+"');\"";
-		                str += "<tr style='height:30px' onclick="+strForward+">";
-		                str += "<td style='height:30px;'>" + list[i]["farm_name"] + "</td>";
-		                str += "<td style='height:30px;'>" + list[i]["house_name"] + "</td>";
-		                str += "<td style='height:30px;'>" + list[i]["date_age"] + "</td>";
-		                str += "<td style='height:30px;'>" + list[i]["high_temp_num"] + "</td>";
-		                str += "<td style='height:30px;'>" + list[i]["low_temp_num"] + "</td>";
-		                str += "<td style='height:30px;'>" + list[i]["high_negative_pressure_num"] + "</td>";
-		                str += "<td style='height:30px;'>" + list[i]["low_negative_pressure_num"] + "</td>";
-		                str += "<td style='height:30px;'>" + list[i]["high_co2_num"] + "</td>";
-		                str += "<td style='height:30px;'>" + list[i]["high_water_num"] + "</td>";
-		                str += "<td style='height:30px;'>" + list[i]["low_water_num"] + "</td>";
-		                $("#tbodyAlarmHistList").append(str);
-		            }
-
-		        }
-		    });
-			
 		}
 	});
 	}else{
@@ -205,55 +256,6 @@ function reflushAlarmHist(num){
 					$("#houseId2").append("<option value=" + list[i].id + ">" + list[i].house_name+ "</option>");
 				}
 				setBatchId2();
-				
-				var param;
-				if($("#beginTime").val()=="" && $("#endTime").val()==""){
-					param={
-							"farmId2" : $("#farmId2").val(),"houseId2":$("#houseId2").val(),"batchNo2":$("#batchId2").val(),"bizCode":$("#bizCode").val()
-						};
-				}else if($("#beginTime").val()=="" && $("#endTime").val()!=""){
-					param = {
-							"farmId2" : $("#farmId2").val(),"houseId2":$("#houseId2").val(),"batchNo2":$("#batchId2").val(),"endTime":$("#endTime").val(),
-							"bizCode":$("#bizCode").val()
-					};
-				}else if($("#beginTime").val()!="" && $("#endTime").val()==""){
-					param = {
-							"farmId2" : $("#farmId2").val(),"houseId2":$("#houseId2").val(),"batchNo2":$("#batchId2").val(),"beginTime":$("#beginTime").val(),
-							"bizCode":$("#bizCode").val()
-					};
-				}else{
-					param = {
-							"farmId2" : $("#farmId2").val(),"houseId2":$("#houseId2").val(),"batchNo2":$("#batchId2").val(),"beginTime":$("#beginTime").val(),
-							"endTime":$("#endTime").val(),"bizCode":$("#bizCode").val()
-						};
-				}
-				
-				$.ajax({                              
-			        // async: true,
-			        url: path+"/alarmHist/queryAlarmHist3",
-			        data: param,
-			        type: "POST",
-			        dataType: "json",
-			        cache: false,
-			        // timeout:50000,
-			        success: function (result) {
-			        	var list = eval(result.obj);
-			            $("#tbodyAlarmHistDetailList tr").remove();
-			            for (var i = 0; i < list.length; i++) {
-			                var str = '';
-			                str += "<tr style='height:30px' >";
-			                str += "<td style='height:30px;'>" + list[i]["date_age"] + "</td>";
-			                str += "<td style='height:30px;'>" + list[i]["alarm_time"] + "</td>";
-			                str += "<td style='height:30px;'>" + list[i]["alarm_Name"] + "</td>";
-			                str += "<td style='height:30px;'>" + list[i]["set_value"] + "</td>";
-			                str += "<td style='height:30px;'>" + list[i]["actual_value"] + "</td>";
-			                str += "<td style='height:30px;'>" + list[i]["continue_time"] + "</td>";
-			                str += "<td style='height:30px;'>" + list[i]["response_person"] + "</td>";
-			                $("#tbodyAlarmHistDetailList").append(str);
-			            }
-
-			        }
-			    });
 				
 			}
 		});
@@ -372,7 +374,7 @@ function reflushAlarmHist2(num){
 			                str += "<td style='height:30px;'>" + list[i]["alarm_Name"] + "</td>";
 			                str += "<td style='height:30px;'>" + list[i]["set_value"] + "</td>";
 			                str += "<td style='height:30px;'>" + list[i]["actual_value"] + "</td>";
-			                str += "<td style='height:30px;'>" + list[i]["continue_time"] + "</td>";
+			                str += "<td style='height:30px;'>" + list[i]["continue_time"] + "分钟</td>";
 			                str += "<td style='height:30px;'>" + list[i]["response_person"] + "</td>";
 			                $("#tbodyAlarmHistDetailList").append(str);
 			            }
@@ -462,7 +464,7 @@ function reflushAlarmHist3(num){
 	                str += "<td style='height:30px;'>" + list[i]["alarm_Name"] + "</td>";
 	                str += "<td style='height:30px;'>" + list[i]["set_value"] + "</td>";
 	                str += "<td style='height:30px;'>" + list[i]["actual_value"] + "</td>";
-	                str += "<td style='height:30px;'>" + list[i]["continue_time"] + "</td>";
+	                str += "<td style='height:30px;'>" + list[i]["continue_time"] + "分钟</td>";
 	                str += "<td style='height:30px;'>" + list[i]["response_person"] + "</td>";
 	                $("#tbodyAlarmHistDetailList").append(str);
 	            }
@@ -515,7 +517,7 @@ function reflushAlarmHist4(){
                 str += "<td style='height:30px;'>" + list[i]["alarm_Name"] + "</td>";
                 str += "<td style='height:30px;'>" + list[i]["set_value"] + "</td>";
                 str += "<td style='height:30px;'>" + list[i]["actual_value"] + "</td>";
-                str += "<td style='height:30px;'>" + list[i]["continue_time"] + "</td>";
+                str += "<td style='height:30px;'>" + list[i]["continue_time"] + "分钟</td>";
                 str += "<td style='height:30px;'>" + list[i]["response_person"] + "</td>";
                 $("#tbodyAlarmHistDetailList").append(str);
             }
@@ -594,7 +596,7 @@ function forward(farmId,houseId,date_age,batchNo,date){
 				                str += "<td style='height:30px;'>" + list[i]["alarm_Name"] + "</td>";
 				                str += "<td style='height:30px;'>" + list[i]["set_value"] + "</td>";
 				                str += "<td style='height:30px;'>" + list[i]["actual_value"] + "</td>";
-				                str += "<td style='height:30px;'>" + list[i]["continue_time"] + "</td>";
+				                str += "<td style='height:30px;'>" + list[i]["continue_time"] + "分钟</td>";
 				                str += "<td style='height:30px;'>" + list[i]["response_person"] + "</td>";
 				                $("#tbodyAlarmHistDetailList").append(str);
 				            }

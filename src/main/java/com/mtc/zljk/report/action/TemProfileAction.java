@@ -82,6 +82,9 @@ public class TemProfileAction extends BaseAction {
 		Json j=new Json();
 		PageData pd = this.getPageData();
 		String buttonValue= pd.getString("buttonValue");
+		if(buttonValue==null){
+			buttonValue=pd.getString("btValue");
+		}
 		String queryTime= pd.getString("queryTime");
 		String beginTime=DateUtil.getDay();
 		String endTime=DateUtil.getDay();
@@ -116,7 +119,17 @@ public class TemProfileAction extends BaseAction {
 		super.writeJson(j, response);
 	}
 	
-	
+	@RequestMapping("/tempCompareUrl")
+	public ModelAndView tempCompareUrl()throws Exception{
+		ModelAndView mv = this.getModelAndView();
+		PageData pd = this.getPageData();
+		mv.setViewName("modules/report/tempCompare");
+		mv.addObject("farmList",getFarmList());
+		mv.addObject("houseList",getHouseList(pd));
+		mv.addObject("batchList",getBatchList(pd));
+		mv.addObject("pd",pd);
+		return mv;
+	}
 	
 	@RequestMapping("/getHouse")
 	public void getHouse(HttpServletResponse response) throws Exception{

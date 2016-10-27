@@ -140,7 +140,7 @@
 						 highWaterDeprivations.push(lists[i].high_water_deprivation);
 						 lowWaterDeprivations.push(lists[i].low_water_deprivation);
 					}
-						
+					    window.parent.show();
 						window.parent.createChar3(xpNames,waterConsumptions,setWaterDeprivations,highWaterDeprivations,lowWaterDeprivations);
 				}
 			})
@@ -148,6 +148,7 @@
      }
      
      function closeB(){
+    	 window.parent.hidden();
     	 parent.layer.closeAll();
      }
 </script>

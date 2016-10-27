@@ -18,10 +18,9 @@
 <script type="text/javascript" src="<%=path%>/framework/js/charts/exporting.src.js"></script>
 <script type="text/javascript" src="<%=path%>/modules/alarm/js/alarm.js"></script>
 <script type="text/javascript">
-var isRead="${pd.write_read}";//菜单是否只读
 	jQuery(document).ready(function() {
 		App.init(); // initlayout and core plugins
-		var win_h = $(window).height() - 605;
+		var win_h = $(window).height() - 208;
 		$("#monitor_date_table").css("min-height", win_h);
 		$("#page-content").css("min-height", win_h);
 		 $("#user_date_table").css("min-height",win_h-80);
@@ -61,7 +60,7 @@ var isRead="${pd.write_read}";//菜单是否只读
 		if($("#yincang").val()=="1"){
 			$("#yincang2").css("display", "block");
 		}else{
-			$("#yincang2").setAttribute("readOnly","true");
+			$("#yincang2").css("display", "none");
 		}
 	}
 	
@@ -94,10 +93,32 @@ var isRead="${pd.write_read}";//菜单是否只读
 									<!-- BEGIN FORM-->
 									<div class="form-horizontal" style="height: 40px;">
 										<div style="height: 20px;">
-											<div class="span4">
+										   <div class="span3" style="width: 250px;">
+															<div class="control-group">
+																<label class="control-label" style="width: 30px;">公司</label>
+																<div class="controls" style="margin-left: 35px;">
+																	<select id="companyId" style="width: 200px;" tabindex="1" name="companyId">
+			 															<option value="">中粮肉食投资有限公司</option>  
+																	</select>
+																</div>
+															</div>
+														</div>
+														
+														<div class="span3" style="width: 200px;">
+															<div class="control-group">
+																<label class="control-label" style="width: 30px;">基地</label>
+																<div class="controls" style="margin-left: 35px;">
+																	<select id="jidiId" style="width: 160px;" tabindex="1" name="jidiId">
+			 															<option value="">吉林养殖</option>  
+																	</select>
+																</div>
+															</div>
+														</div>
+														
+											<div class="span4" style="width: 200px;">
 												<div class="control-group">
-													<label class="control-label" style="width: 60px;">农场</label>
-													<div class="controls" style="margin-left: 65px;">
+													<label class="control-label" style="width: 30px;">农场</label>
+													<div class="controls" style="margin-left: 35px;">
 														<select id="farmId" class="m-wrap span12" tabindex="1" name="farmId" onchange="reflushAlarm();">	
 <!-- 		                                                 <option value="">全部</option> -->
 		                                                 <c:if test="${!empty farmList}">
@@ -112,13 +133,13 @@ var isRead="${pd.write_read}";//菜单是否只读
 
 											<!--/span-->
 
-											<div class="span4">
+											<div class="span4" style="width: 200px;">
 
 												<div class="control-group">
 
-													<label class="control-label" style="width: 60px;">栋舍</label>
+													<label class="control-label" style="width: 30px;">栋舍</label>
 
-													<div class="controls" style="margin-left: 65px;">
+													<div class="controls" style="margin-left: 35px;">
 
 														<select id="houseId" class="m-wrap span12" tabindex="1" name="houseId" onchange="search();">
 <!-- 														<option value="">全部</option> -->
@@ -135,7 +156,7 @@ var isRead="${pd.write_read}";//菜单是否只读
 											<!--/span-->
 											<!--/span-->
 
-											<div class="span4">
+											<div class="span4" style="width: 250px;">
 
 												<div class="control-group">
 
@@ -196,46 +217,71 @@ var isRead="${pd.write_read}";//菜单是否只读
 									</tr>
 
 								</thead>
-								<tr style="width: 0px; height: 0px;"></tr>
+								<tr></tr>
 								<tbody id="tbodySBDayageSettingSubList">
 								
                                    <c:if test="${!empty sBDayageSettingSubList}">
 		                              <c:forEach var="sBDayageSettingSub" items="${sBDayageSettingSubList}">
 		                              <script>	
-                                       function chufa${sBDayageSettingSub.uid_num}(){
-		                               $("#monitor_date_table").find("input").each(function(){
-	                                                             $(this).attr("readOnly",true);
-                                       });
-		                               //$("#day_age"+${sBDayageSettingSub.uid_num}).removeAttr("readOnly");
-		                               $("#set_temp"+${sBDayageSettingSub.uid_num}).removeAttr("readOnly");
-		                               $("#high_alarm_temp"+${sBDayageSettingSub.uid_num}).removeAttr("readOnly");
-		                               $("#low_alarm_temp"+${sBDayageSettingSub.uid_num}).removeAttr("readOnly");
-	                                   }
-                                      </script>
-                                        <c:if test="${!empty sBDayageSettingSub.set_temp}">
-                                            <tr style="width: 550px; height: 15px;" >
-                                                <td style="text-align: center;width: 30px;height: 15px;">
-                                                    <!--                                         ${index+1} -->
-                                                    <input id="${sBDayageSettingSub.uid_num}" type="radio" name="checkedSBDayageSettingSubId" value="${sBDayageSettingSub.uid_num}" onchange="chufa${sBDayageSettingSub.uid_num}();" />
-                                                </td>
-
-                                                <td id="day_agea${sBDayageSettingSub.uid_num}" style="text-align: center;height: 15px;">
-                                                    <input id="day_age${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.day_age }" readonly="readonly" style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;text-align: center;width: 100%;height: 100%;">
-                                                </td>
-                                                <td id="set_tempa${sBDayageSettingSub.uid_num}" style="text-align: center;height: 15px;">
-                                                    <input id="set_temp${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.set_temp }" readonly="readonly" style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;text-align: center;width: 100%; height: 100%;">
-                                                </td>
-                                                <td id="high_alarm_tempa${sBDayageSettingSub.uid_num}" style="text-align: center;height: 15px;">
-                                                    <input id="high_alarm_temp${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.high_alarm_temp }" readonly="readonly" style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;text-align: center;width: 100%;height: 100%; ">
-                                                </td>
-                                                <td id="low_alarm_tempa${sBDayageSettingSub.uid_num}" style="text-align: center;height: 15px;">
-                                                    <input id="low_alarm_temp${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.low_alarm_temp }" readonly="readonly" style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;text-align: center;width: 100%;height: 100%; ">
-                                                </td>
-                                            </tr>
-                                        </c:if>
-                                    </c:forEach>
-                                </c:if>
-                                </tbody>
+		                              function chufa${sBDayageSettingSub.uid_num}(){
+		                          		if($("#"+${sBDayageSettingSub.uid_num}).is(":checked")==true){
+		                          			$("#day_agea"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#set_tempa"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#high_alarm_tempa"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#low_alarm_tempa"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#day_ageb"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#set_tempb"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#high_alarm_tempb"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#low_alarm_tempb"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          		}else{
+		                          			$("#day_agea"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#set_tempa"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#high_alarm_tempa"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#low_alarm_tempa"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#day_ageb"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#set_tempb"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#high_alarm_tempb"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#low_alarm_tempb"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          		}
+		                          	}
+		                              </script>
+		                              <c:if test="${!empty sBDayageSettingSub.set_temp}">
+		                                 <tr style="width: 550px;height: 15px;" >
+		                                 <td style="height:15px;text-align: center;width: 30px;">	 
+<!-- 		                                 ${index+1} -->
+								          <input id="${sBDayageSettingSub.uid_num}" type="radio" name="checkedSBDayageSettingSubId" value="${sBDayageSettingSub.uid_num}" onchange="chufa${sBDayageSettingSub.uid_num}();" />
+		                                 </td>
+		                                  <td id="day_ageb${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: '';">	                                   
+                                          ${sBDayageSettingSub.day_age }
+		                                  </td>
+		                                  <td id="set_tempb${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: '';">
+		                                  ${sBDayageSettingSub.set_temp }
+		                                  </td>
+		                                  <td id="high_alarm_tempb${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: '';">
+		                                  ${sBDayageSettingSub.high_alarm_temp }	
+		                                  </td>
+		                                  <td id="low_alarm_tempb${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: '';">
+		                                  ${sBDayageSettingSub.low_alarm_temp }
+		                                  </td>
+		                                  
+		                                  <td id="day_agea${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: none;">	                                   
+		                                   <input id="day_age${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.day_age }" style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;height: 180%;width: 103%;text-align: center; ">
+		                                  </td>
+		                                  <td id="set_tempa${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: none;">
+		                                  <input id="set_temp${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.set_temp }" style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;height: 180%;width: 103%;text-align: center; ">
+		                                  </td>
+		                                  <td id="high_alarm_tempa${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: none;">
+		                                  <input id="high_alarm_temp${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.high_alarm_temp }" 
+		                                  style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;height: 180%;width: 103%;text-align: center; ">
+		                                  </td>
+		                                  <td id="low_alarm_tempa${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: none;">
+		                                  <input id="low_alarm_temp${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.low_alarm_temp }" style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;height: 180%;width: 103%;text-align: center; ">
+		                                  </td>
+		                                 </tr>
+                                         </c:if>
+		                                  </c:forEach>
+		                            </c:if>                   
+								</tbody>
                                 </c:if>
                                 <!-- 负压设置 -->
                                 <c:if test="${alarmType==2 }">
@@ -253,37 +299,68 @@ var isRead="${pd.write_read}";//菜单是否只读
 									</tr>
 
 								</thead>
-								<tr style="width: 0px; height: 0px;"></tr>
+								<tr></tr>
 								<tbody id="tbodySBDayageSettingSubList">
                                    <c:if test="${!empty sBDayageSettingSubList}">
 		                              <c:forEach var="sBDayageSettingSub" items="${sBDayageSettingSubList}">
 		                              <script>
 		                              function chufa${sBDayageSettingSub.uid_num}(){
-		                               $("#monitor_date_table").find("input").each(function(){
-	                                                             $(this).attr("readOnly",true);
-                                       });
-		                               //$("#day_age"+${sBDayageSettingSub.uid_num}).removeAttr("readOnly");
-		                               $("#set_negative_pressure"+${sBDayageSettingSub.uid_num}).removeAttr("readOnly");
-		                               $("#high_alarm_negative_pressure"+${sBDayageSettingSub.uid_num}).removeAttr("readOnly");
-		                               $("#low_alarm_negative_pressure"+${sBDayageSettingSub.uid_num}).removeAttr("readOnly");
-	                                   }
+		                          		if($("#"+${sBDayageSettingSub.uid_num}).is(":checked")==true){
+		                          			$("#day_agea"+${sBDayageSettingSub.uid_num}).css("display", '');
+// 		                          			$("#set_negative_pressurea"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#high_alarm_negative_pressurea"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#low_alarm_negative_pressurea"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#day_ageb"+${sBDayageSettingSub.uid_num}).css("display", "none");
+// 		                          			$("#set_negative_pressureb"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#high_alarm_negative_pressureb"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#low_alarm_negative_pressureb"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          		}else{
+		                          			$("#day_agea"+${sBDayageSettingSub.uid_num}).css("display", "none");
+// 		                          			$("#set_negative_pressurea"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#high_alarm_negative_pressurea"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#low_alarm_negative_pressurea"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#day_ageb"+${sBDayageSettingSub.uid_num}).css("display", '');
+// 		                          			$("#set_negative_pressureb"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#high_alarm_negative_pressureb"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#low_alarm_negative_pressureb"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          		}
+		                          	}
 		                              </script>
 		                                 <c:if test="${!empty sBDayageSettingSub.high_alarm_negative_pressure}">
 		                                 <tr style="width: 250px;height: 15px;">
-		                                            <td style="text-align: center;width: 30px;height: 15px;">
-                                                    <!--                                         ${index+1} -->
-                                                    <input id="${sBDayageSettingSub.uid_num}" type="radio" name="checkedSBDayageSettingSubId" value="${sBDayageSettingSub.uid_num}" onchange="chufa${sBDayageSettingSub.uid_num}();" />
-                                                </td>
-
-                                                <td id="day_agea${sBDayageSettingSub.uid_num}" style="text-align: center;height: 15px;">
-                                                    <input id="day_age${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.day_age }" readonly="readonly" style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;text-align: center;width: 100%;height: 100%;">
-                                                </td>
-                                                <td id="high_alarm_negative_pressurea${sBDayageSettingSub.uid_num}" style="text-align: center;height: 15px;">
-                                                    <input id="high_alarm_negative_pressure${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.high_alarm_negative_pressure }" readonly="readonly" style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;text-align: center;width: 100%;height: 100%; ">
-                                                </td>
-                                                <td id="low_alarm_negative_pressurea${sBDayageSettingSub.uid_num}" style="text-align: center;height: 15px;">
-                                                    <input id="low_alarm_negative_pressure${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.low_alarm_negative_pressure }" readonly="readonly" style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;text-align: center;width: 100%;height: 100%; ">
-                                                </td>
+		                                 <td style="height:15px;text-align: center;width: 30px;">	 
+<!-- 		                                 ${index+1} -->
+								          <input id="${sBDayageSettingSub.uid_num}" type="radio" name="checkedSBDayageSettingSubId" value="${sBDayageSettingSub.uid_num}" 
+								          onchange="chufa${sBDayageSettingSub.uid_num}();" />
+		                                 </td>
+		                                 <td id="day_ageb${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: '';">
+		                                   ${sBDayageSettingSub.day_age }
+		                                  </td> 
+<!-- 		                                  <td id="set_negative_pressureb${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: '';"> -->
+<!-- 		                                  ${sBDayageSettingSub.set_negative_pressure } -->
+<!-- 		                                  </td> -->
+		                                  <td id="high_alarm_negative_pressureb${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: '';">
+		                                  ${sBDayageSettingSub.high_alarm_negative_pressure }
+		                                  </td>
+		                                  <td id="low_alarm_negative_pressureb${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: '';">
+		                                  ${sBDayageSettingSub.low_alarm_negative_pressure }
+		                                  </td>  
+		                                 
+		                                  <td id="day_agea${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: none;">
+		                                   <input id="day_age${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.day_age }" style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;height: 180%;width: 103%;text-align: center; ">
+		                                  </td> 
+<!-- 		                                  <td id="set_negative_pressurea${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: none;"> -->
+<!-- 		                                  <input id="set_negative_pressure${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.set_negative_pressure }" name="set_negative_pressure${sBDayageSettingSub.uid_num}"  -->
+<!-- 		                                  style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;height: 200%;width: 103%;text-align: center; "> -->
+<!-- 		                                  </td> -->
+		                                  <td id="high_alarm_negative_pressurea${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: none;">
+		                                  <input id="high_alarm_negative_pressure${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.high_alarm_negative_pressure }" name="high_alarm_negative_pressure${sBDayageSettingSub.uid_num}" 
+		                                  style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;height: 180%;width: 103%;text-align: center; ">
+		                                  </td>
+		                                  <td id="low_alarm_negative_pressurea${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: none;">
+		                                  <input id="low_alarm_negative_pressure${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.low_alarm_negative_pressure }" name="low_alarm_negative_pressure${sBDayageSettingSub.uid_num}" 
+		                                  style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;height: 180%;width: 103%;text-align: center; ">
+		                                  </td>  
 		                                 </tr>
 		                                 </c:if>
 		                                  </c:forEach>
@@ -306,34 +383,68 @@ var isRead="${pd.write_read}";//菜单是否只读
 									</tr>
 
 								</thead>
-								<tr style="width: 0px; height: 0px;"></tr>
+								<tr></tr>
 								<tbody id="tbodySBDayageSettingSubList">
                                    <c:if test="${!empty sBDayageSettingSubList}">
 		                              <c:forEach var="sBDayageSettingSub" items="${sBDayageSettingSubList}">
 		                              <script>
 		                              function chufa${sBDayageSettingSub.uid_num}(){
-		                               $("#monitor_date_table").find("input").each(function(){
-	                                                             $(this).attr("readOnly",true);
-                                       });
-		                               //$("#day_age"+${sBDayageSettingSub.uid_num}).removeAttr("readOnly");
-		                               $("#set_co2c"+${sBDayageSettingSub.uid_num}).removeAttr("readOnly");
-		                               $("#high_alarm_co2c"+${sBDayageSettingSub.uid_num}).removeAttr("readOnly");
-		                               $("#low_alarm_co2c"+${sBDayageSettingSub.uid_num}).removeAttr("readOnly");
-	                                   }
+		                          		if($("#"+${sBDayageSettingSub.uid_num}).is(":checked")==true){
+		                          			$("#day_agea"+${sBDayageSettingSub.uid_num}).css("display", '');
+// 		                          			$("#set_co2a"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#high_alarm_co2a"+${sBDayageSettingSub.uid_num}).css("display", '');
+// 		                          			$("#low_alarm_co2a"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#day_ageb"+${sBDayageSettingSub.uid_num}).css("display", "none");
+// 		                          			$("#set_co2b"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#high_alarm_co2b"+${sBDayageSettingSub.uid_num}).css("display", "none");
+// 		                          			$("#low_alarm_co2b"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          		}else{
+		                          			$("#day_agea"+${sBDayageSettingSub.uid_num}).css("display", "none");
+// 		                          			$("#set_co2a"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#high_alarm_co2a"+${sBDayageSettingSub.uid_num}).css("display", "none");
+// 		                          			$("#low_alarm_co2a"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#day_ageb"+${sBDayageSettingSub.uid_num}).css("display", '');
+// 		                          			$("#set_co2b"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#high_alarm_co2b"+${sBDayageSettingSub.uid_num}).css("display", '');
+// 		                          			$("#low_alarm_co2b"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          		}
+		                          	}
 		                              </script>
 		                                 <c:if test="${!empty sBDayageSettingSub.high_alarm_co2}">
 		                                 <tr >
-		                                           <td style="text-align: center;width: 30px;height: 15px;">
-                                                    <!--                                         ${index+1} -->
-                                                    <input id="${sBDayageSettingSub.uid_num}" type="radio" name="checkedSBDayageSettingSubId" value="${sBDayageSettingSub.id}" onchange="chufa${sBDayageSettingSub.uid_num}();" />
-                                                </td>
-
-                                                <td id="day_agea${sBDayageSettingSub.uid_num}" style="text-align: center;height: 15px;">
-                                                    <input id="day_age${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.day_age }" readonly="readonly" style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;text-align: center;width: 100%;height: 100%;">
-                                                </td>
-                                                <td id="high_alarm_co2a${sBDayageSettingSub.uid_num}" style="text-align: center;height: 15px;">
-                                                    <input id="high_alarm_co2c${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.high_alarm_co2 }" readonly="readonly" style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;text-align: center;width: 100%;height: 100%; ">
-                                                </td>
+		                                 <td style="height:15px;text-align: center;width: 30px;">	 
+								          <input id="${sBDayageSettingSub.uid_num}" type="radio" name="checkedSBDayageSettingSubId" value="${sBDayageSettingSub.id}" 
+								          onchange="chufa${sBDayageSettingSub.uid_num}();"/>
+		                                 </td>
+		                                 <td id="day_ageb${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: '';">
+		                                   ${sBDayageSettingSub.day_age }
+		                                  </td>
+<!-- 		                                  <td id="set_co2b${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: '';"> -->
+<!-- 		                                  ${sBDayageSettingSub.set_co2 } -->
+<!-- 		                                  </td> -->
+		                                  <td id="high_alarm_co2b${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: '';">
+		                                  ${sBDayageSettingSub.high_alarm_co2 }
+		                                  </td>
+<!-- 		                                  <td id="low_alarm_co2b${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: '';"> -->
+<!-- 		                                  ${sBDayageSettingSub.low_alarm_co2 } -->
+<!-- 		                                  </td> -->
+		                                 
+		                                  <td id="day_agea${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: none;">
+		                                   <input id="day_age${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.day_age }" 
+		                                   style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;height: 180%;width: 103%;text-align: center; ">
+		                                  </td>
+<!-- 		                                  <td id="set_co2a${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: none;"> -->
+<!-- 		                                  <input id="set_co2c${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.set_co2 }" name="set_co2a${sBDayageSettingSub.uid_num}"  -->
+<!-- 		                                  style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;height: 200%;width: 103%;text-align: center; "> -->
+<!-- 		                                  </td> -->
+		                                  <td id="high_alarm_co2a${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: none;">
+		                                  <input id="high_alarm_co2c${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.high_alarm_co2 }" name="high_alarm_co2a${sBDayageSettingSub.uid_num}" 
+		                                  style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;height: 180%;width: 103%;text-align: center; ">
+		                                  </td>
+<!-- 		                                  <td id="low_alarm_co2a${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: none;"> -->
+<!-- 		                                  <input id="low_alarm_co2c${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.low_alarm_co2 }" name="low_alarm_co2a${sBDayageSettingSub.uid_num}"  -->
+<!-- 		                                  style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;height: 200%;width: 103%;text-align: center; "> -->
+<!-- 		                                  </td> -->
 		                                 </tr>
 		                                 </c:if>
 		                                  </c:forEach>
@@ -356,40 +467,69 @@ var isRead="${pd.write_read}";//菜单是否只读
 									</tr>
 
 								</thead>
-								<tr style="width: 0px; height: 0px;"></tr>
+								<tr></tr>
 								<tbody id="tbodySBDayageSettingSubList">
                                    <c:if test="${!empty sBDayageSettingSubList}">
 		                              <c:forEach var="sBDayageSettingSub" items="${sBDayageSettingSubList}">
 		                              <script>
 		                              function chufa${sBDayageSettingSub.uid_num}(){
-		                               $("#monitor_date_table").find("input").each(function(){
-	                                                             $(this).attr("readOnly",true);
-                                       });
-		                               //$("#day_age"+${sBDayageSettingSub.uid_num}).removeAttr("readOnly");
-		                               $("#set_water_deprivation"+${sBDayageSettingSub.uid_num}).removeAttr("readOnly");
-		                               $("#high_water_deprivation"+${sBDayageSettingSub.uid_num}).removeAttr("readOnly");
-		                               $("#low_water_deprivation"+${sBDayageSettingSub.uid_num}).removeAttr("readOnly");
-	                                   }
+		                          		if($("#"+${sBDayageSettingSub.uid_num}).is(":checked")==true){
+		                          			$("#day_agea"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#set_water_deprivationa"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#high_water_deprivationa"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#low_water_deprivationa"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#day_ageb"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#set_water_deprivationb"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#high_water_deprivationb"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#low_water_deprivationb"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          		}else{
+		                          			$("#day_agea"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#set_water_deprivationa"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#high_water_deprivationa"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#low_water_deprivationa"+${sBDayageSettingSub.uid_num}).css("display", "none");
+		                          			$("#day_ageb"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#set_water_deprivationb"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#high_water_deprivationb"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          			$("#low_water_deprivationb"+${sBDayageSettingSub.uid_num}).css("display", '');
+		                          		}
+		                          	}
 		                              </script>
 		                                 <c:if test="${!empty sBDayageSettingSub.set_water_deprivation}">
 		                                 <tr style="width: 500px;height: 15px;">
-		                                            <td style="text-align: center;width: 30px;height: 15px;">
-                                                    <!--                                         ${index+1} -->
-                                                    <input id="${sBDayageSettingSub.uid_num}" type="radio" name="checkedSBDayageSettingSubId" value="${sBDayageSettingSub.uid_num}" onchange="chufa${sBDayageSettingSub.uid_num}();" />
-                                                </td>
-
-                                                <td id="day_agea${sBDayageSettingSub.uid_num}" style="text-align: center;height: 15px;">
-                                                    <input id="day_age${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.day_age }" readonly="readonly" style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;text-align: center;width: 100%;height: 100%;">
-                                                </td>
-                                                <td id="set_water_deprivationa${sBDayageSettingSub.uid_num}" style="text-align: center;height: 15px;">
-                                                    <input id="set_water_deprivation${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.set_water_deprivation }" readonly="readonly" style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;text-align: center;width: 100%; height: 100%;">
-                                                </td>
-                                                <td id="high_water_deprivationa${sBDayageSettingSub.uid_num}" style="text-align: center;height: 15px;">
-                                                    <input id="high_water_deprivation${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.high_water_deprivation }" readonly="readonly" style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;text-align: center;width: 100%;height: 100%; ">
-                                                </td>
-                                                <td id="low_water_deprivationa${sBDayageSettingSub.uid_num}" style="text-align: center;height: 15px;">
-                                                    <input id="low_water_deprivation${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.low_water_deprivation }" readonly="readonly" style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;text-align: center;width: 100%;height: 100%; ">
-                                                </td>
+		                                 <td style="height:15px;text-align: center;width: 30px;">	 
+<!-- 		                                 ${index+1} -->
+								          <input id="${sBDayageSettingSub.uid_num}" type="radio" name="checkedSBDayageSettingSubId" value="${sBDayageSettingSub.id}" 
+								          onchange="chufa${sBDayageSettingSub.uid_num}();"/>
+		                                 </td>
+		                                 <td id="day_ageb${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: '';">
+		                                   ${sBDayageSettingSub.day_age }
+		                                  </td>
+		                                  <td id="set_water_deprivationb${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: '';">
+		                                  ${sBDayageSettingSub.set_water_deprivation }
+		                                  </td>
+		                                  <td id="high_water_deprivationb${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: '';">
+		                                  ${sBDayageSettingSub.high_water_deprivation }
+		                                  </td>
+		                                  <td id="low_water_deprivationb${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: '';">
+		                                  ${sBDayageSettingSub.low_water_deprivation }
+		                                  </td>
+		                                 
+		                                  <td id="day_agea${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: none;">
+		                                   <input id="day_age${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.day_age }"
+		                                   style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;height: 180%;width: 103%;text-align: center; ">
+		                                  </td>
+		                                  <td id="set_water_deprivationa${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: none;">
+		                                  <input id="set_water_deprivation${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.set_water_deprivation }" name="set_water_deprivation${sBDayageSettingSub.uid_num}" 
+		                                  style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;height: 180%;width: 103%;text-align: center; ">
+		                                  </td>
+		                                  <td id="high_water_deprivationa${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: none;">
+		                                  <input id="high_water_deprivation${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.high_water_deprivation }" name="high_water_deprivation${sBDayageSettingSub.uid_num}" 
+		                                  style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;height: 180%;width: 103%;text-align: center; ">
+		                                  </td>
+		                                  <td id="low_water_deprivationa${sBDayageSettingSub.uid_num}" style="height:15px;text-align: center;display: none;">
+		                                  <input id="low_water_deprivation${sBDayageSettingSub.uid_num}" type="text" value="${sBDayageSettingSub.low_water_deprivation }" name="low_water_deprivation${sBDayageSettingSub.uid_num}" 
+		                                  style="border: none;margin-left:-7px;margin-top:-9px;margin-bottom:0px;height: 180%;width: 103%;text-align: center; ">
+		                                  </td>
 		                                 </tr>
 		                                 </c:if>
 		                                  </c:forEach>

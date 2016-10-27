@@ -133,7 +133,7 @@
 						}
 						humiditys.push(lists[i].humidity);
 					}
-						
+					    window.parent.show();
 						window.parent.createChar3(xpNames,humiditys);
 				}
 			})
@@ -141,6 +141,7 @@
      }
      
      function closeB(){
+    	 window.parent.hidden();
     	 parent.layer.closeAll();
      }
 </script>

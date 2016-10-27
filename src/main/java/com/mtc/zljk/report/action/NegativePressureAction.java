@@ -65,6 +65,9 @@ public class NegativePressureAction extends BaseAction {
 		Json j=new Json();
 		PageData pd = this.getPageData();
 		String buttonValue= pd.getString("buttonValue");
+		if(buttonValue==null){
+			buttonValue=pd.getString("btValue");
+		}
 		String queryTime= pd.getString("queryTime");
 		String beginTime=DateUtil.getDay();
 		String endTime=DateUtil.getDay();
@@ -97,6 +100,18 @@ public class NegativePressureAction extends BaseAction {
 		j.setSuccess(true);
 		j.setObj(np);
 		super.writeJson(j, response);
+	}
+	
+	@RequestMapping("/negativeUrl")
+	public ModelAndView negativeUrl()throws Exception{
+		ModelAndView mv = this.getModelAndView();
+		PageData pd = this.getPageData();
+		mv.setViewName("modules/report/negativeCompare");
+		mv.addObject("farmList",getFarmList());
+		mv.addObject("houseList",getHouseList(pd));
+		mv.addObject("batchList",getBatchList(pd));
+		mv.addObject("pd",pd);
+		return mv;
 	}
 	
 	@RequestMapping("/getHouse")

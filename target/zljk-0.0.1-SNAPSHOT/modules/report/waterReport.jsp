@@ -16,7 +16,7 @@
 
 <script type="text/javascript" src="<%=path%>/framework/js/charts/highcharts.js"></script>
 <script type="text/javascript" src="<%=path%>/framework/js/charts/exporting.src.js"></script>
-<script type="text/javascript" src="<%=path%>/modules/report/js/waterReport.js"></script>
+
 </head>
 <script>
 var houseId = "${pd.house_id}";
@@ -62,39 +62,40 @@ var lowWaterDeprivation = new Array();//低报耗水
 									<!-- BEGIN FORM-->
 									<div class="form-horizontal" style="height: 40px;">
 										<div style="height: 20px;">
-											<div class="span2">
-												<div class="control-group">
-													<label class="control-label" style="width: 50px;">农场</label>
-													<div class="controls" style="margin-left: 55px;">
-														<select id="farmId" class="m-wrap span12" tabindex="1" name="farmId" >	
-			                                                 <c:if test="${!empty farmList}">
-			                                                 <c:forEach var="farm" items="${farmList}">
-                                                                 <option value="${farm.id }" <c:if test="${pd.farm_id==farm.id}">selected</c:if>>${farm.farm_name_chs }</option>
-			                                                 </c:forEach>
-		                                                 </c:if>
-														</select>
-													</div>
-												</div>
-											</div>
+										<%@ include file="../../framework/org.jsp"%>
+<!-- 											<div class="span2"> -->
+<!-- 												<div class="control-group"> -->
+<!-- 													<label class="control-label" style="width: 50px;">农场</label> -->
+<!-- 													<div class="controls" style="margin-left: 55px;"> -->
+<!-- 														<select id="farmId" class="m-wrap span12" tabindex="1" name="farmId" >	 -->
+<!-- 			                                                 <c:if test="${!empty farmList}"> -->
+<!-- 			                                                 <c:forEach var="farm" items="${farmList}"> -->
+<!--                                                                  <option value="${farm.id }" <c:if test="${pd.farm_id==farm.id}">selected</c:if>>${farm.farm_name_chs }</option> -->
+<!-- 			                                                 </c:forEach> -->
+<!-- 		                                                 </c:if> -->
+<!-- 														</select> -->
+<!-- 													</div> -->
+<!-- 												</div> -->
+<!-- 											</div> -->
 
 											<!--/span-->
 
-											<div class="span2">
+<!-- 											<div class="span2"> -->
 
-												<div class="control-group">
-													<label class="control-label" style="width: 30px;">栋舍</label>
-													<div class="controls" style="margin-left: 35px;">
-														<select id="houseId" class="m-wrap span12" tabindex="1" >
-			                                             <c:if test="${!empty houseList}">
-			                                                 <c:forEach var="house" items="${houseList}">
-                                                                 <option value="${house.id}" <c:if test="${pd.house_id==house.id}">selected</c:if>>${house.house_name}</option>
-			                                                 </c:forEach>
-                                                         </c:if>
-														</select>
-													</div>
-												</div>
+<!-- 												<div class="control-group"> -->
+<!-- 													<label class="control-label" style="width: 30px;">栋舍</label> -->
+<!-- 													<div class="controls" style="margin-left: 35px;"> -->
+<!-- 														<select id="houseId" class="m-wrap span12" tabindex="1" > -->
+<!-- 			                                             <c:if test="${!empty houseList}"> -->
+<!-- 			                                                 <c:forEach var="house" items="${houseList}"> -->
+<!--                                                                  <option value="${house.id}" <c:if test="${pd.house_id==house.id}">selected</c:if>>${house.house_name}</option> -->
+<!-- 			                                                 </c:forEach> -->
+<!--                                                          </c:if> -->
+<!-- 														</select> -->
+<!-- 													</div> -->
+<!-- 												</div> -->
 
-											</div>
+<!-- 											</div> -->
 
 											<!--/span-->
 
@@ -194,7 +195,7 @@ var lowWaterDeprivation = new Array();//低报耗水
 									</div>
 								</div>
 
-								<div class="portlet-body" id="user_date_table">
+								<div class="portlet-body" id="user_date_table" style="padding-bottom: 30px;">
 									<input type="hidden" name="btValue" id="btValue">
 									<div id="compareRep" class="form-horizontal" ></div>
 									<div class="portlet-body form1"> 
@@ -224,5 +225,6 @@ var lowWaterDeprivation = new Array();//低报耗水
 <script type="text/javascript" src="<%=path%>/js/bootbox.min.js"></script>
 <script type="text/javascript" src="<%=path %>/framework/js/bootstrap-datepicker.js"></script>
 <script type="text/javascript" src="<%=path %>/framework/js/bootstrap-datepicker.zh-CN.js"></script>
+<script type="text/javascript" src="<%=path%>/modules/report/js/waterReport.js"></script>
 </body>
 </html>

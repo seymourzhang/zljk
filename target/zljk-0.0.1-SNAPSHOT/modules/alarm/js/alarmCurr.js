@@ -1,16 +1,26 @@
+var count0rg;
+var num;
+
+function OrgSearch(count0rg,num){
+		reflushAlarmCurr();	
+}
+
 
 function reflushAlarmCurr(){
 
 	var param;
-	if($("#farmId").val()=="" && $("#houseId").val()==""){
-		param=null;
-	}else if($("#farmId").val()=="" && $("#houseId").val()!=""){
-		param = {"houseId":$("#houseId").val()};
-	}else if($("#farmId").val()!="" && $("#houseId").val()==""){
-		param = {"farmId":$("#farmId").val()};
-	}else{
-		 param = {"farmId":$("#farmId").val(),"houseId":$("#houseId").val()};
-	}
+//	if($("#farmId").val()=="" && $("#houseId").val()==""){
+//		param=null;
+//	}else if($("#farmId").val()=="" && $("#houseId").val()!=""){
+//		param = {"houseId":$("#houseId").val()};
+//	}else if($("#farmId").val()!="" && $("#houseId").val()==""){
+//		param = {"farmId":$("#farmId").val()};
+//	}else{
+		 param = {
+				 "farmId":$("#orgId"+(count0rg-1)).val().split(",")[1],
+				 "houseId":$("#orgId"+count0rg).val().split(",")[1]
+				 };
+//	}
 
  $.ajax({
      // async: true,

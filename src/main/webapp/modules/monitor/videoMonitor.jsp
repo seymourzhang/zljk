@@ -22,12 +22,12 @@
 </head>
 <script>
 	var houseId = "${pd.house_id}";
-	jQuery(document).ready(function() {
-		$("#monitorExpandForm").slideUp(200);
-		$("#monitorExpand").removeClass("collapse").addClass("expand");
-		App.init(); // initlayout and core plugins
-		$("#monitor_date_table").removeClass("table-hover");
-	})
+// 	jQuery(document).ready(function() {
+// 		$("#monitorExpandForm").slideUp(200);
+// 		$("#monitorExpand").removeClass("collapse").addClass("expand");
+// 		App.init(); // initlayout and core plugins
+// 		$("#monitor_date_table").removeClass("table-hover");
+// 	})
 </script>
 <body style="background-color: #ffffff;">
 	<div id="page-content" class="clearfix"  style="padding-top: 10px;">
@@ -54,50 +54,51 @@
 							<!-- BEGIN FORM-->
 							<div class="form-horizontal" style="height: 40px;">
 								<div style="height: 20px;">
-									<div class="span3">
-										<div class="control-group">
-											<label class="control-label" style="width: 50px;">农场</label>
-											<div class="controls" style="margin-left: 55px;">
-												<select id="farmId" class="m-wrap span12" tabindex="1" name="farmId">
+								<%@ include file="../../framework/org.jsp"%>
+<!-- 									<div class="span3"> -->
+<!-- 										<div class="control-group"> -->
+<!-- 											<label class="control-label" style="width: 50px;">农场</label> -->
+<!-- 											<div class="controls" style="margin-left: 55px;"> -->
+<!-- 												<select id="farmId" class="m-wrap span12" tabindex="1" name="farmId"> -->
 													<!-- 	<option value="">全部</option> -->
-													<c:if test="${!empty farmList}">
-														<c:forEach var="farm" items="${farmList}">
-															<option value="${farm.id }" <c:if test="${pd.farm_id==farm.id}">selected</c:if>>${farm.farm_name_chs }</option>
-														</c:forEach>
-													</c:if>
-													<%--<c:if test="!empty farmList1">
-														<c:forEach var="farm" items="farmList1">
-															<option value="${farm.farm_id}">${farm.farm_name}</option>
-														</c:forEach>
-													</c:if>--%>
-												</select>
-											</div>
-										</div>
-									</div>
+<!-- 													<c:if test="${!empty farmList}"> -->
+<!-- 														<c:forEach var="farm" items="${farmList}"> -->
+<!-- 															<option value="${farm.id }" <c:if test="${pd.farm_id==farm.id}">selected</c:if>>${farm.farm_name_chs }</option> -->
+<!-- 														</c:forEach> -->
+<!-- 													</c:if> -->
+<!-- 													<%--<c:if test="!empty farmList1"> -->
+<!-- 														<c:forEach var="farm" items="farmList1"> -->
+<!-- 															<option value="${farm.farm_id}">${farm.farm_name}</option> -->
+<!-- 														</c:forEach> -->
+<!-- 													</c:if>--%> -->
+<!-- 												</select> -->
+<!-- 											</div> -->
+<!-- 										</div> -->
+<!-- 									</div> -->
 									<!--/span-->
 
-									<div class="span3">
+<!-- 									<div class="span3"> -->
 
-										<div class="control-group">
-											<label class="control-label" style="width: 30px;">栋舍</label>
-											<div class="controls" style="margin-left: 35px;">
-												<select id="houseId" class="m-wrap span12" tabindex="1">
-													<c:if test="${!empty houseList}">
-														<c:forEach var="house" items="${houseList}">
-															<option value="${house.id}" <c:if test="${pd.house_code==house.id}">selected</c:if>>${house.house_name}</option>
-														</c:forEach>
-													</c:if>
+<!-- 										<div class="control-group"> -->
+<!-- 											<label class="control-label" style="width: 30px;">栋舍</label> -->
+<!-- 											<div class="controls" style="margin-left: 35px;"> -->
+<!-- 												<select id="houseId" class="m-wrap span12" tabindex="1"> -->
+<!-- 													<c:if test="${!empty houseList}"> -->
+<!-- 														<c:forEach var="house" items="${houseList}"> -->
+<!-- 															<option value="${house.id}" <c:if test="${pd.house_code==house.id}">selected</c:if>>${house.house_name}</option> -->
+<!-- 														</c:forEach> -->
+<!-- 													</c:if> -->
 													<!-- <option value="">全部</option> -->
-													<%--  <c:if test="${!empty houseList}">
-													 <c:forEach var="house" items="${houseList}">
-													 <option value="${house.id }">${house.house_name}</option>
-													 </c:forEach>
-													 </c:if> --%>
-												</select>
-											</div>
-										</div>
+<!-- 													<%--  <c:if test="${!empty houseList}"> -->
+<!-- 													 <c:forEach var="house" items="${houseList}"> -->
+<!-- 													 <option value="${house.id }">${house.house_name}</option> -->
+<!-- 													 </c:forEach> -->
+<!-- 													 </c:if> --%> -->
+<!-- 												</select> -->
+<!-- 											</div> -->
+<!-- 										</div> -->
 
-									</div>
+<!-- 									</div> -->
 
 								</div>
 

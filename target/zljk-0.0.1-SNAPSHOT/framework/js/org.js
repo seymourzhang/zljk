@@ -77,7 +77,7 @@ function getOrgList(id){
 						$("#batchId").append("<option value=" + list[i].batch_no+ ">" + list[i].batch_no + "</option>");
 					}
 //					$("#batchId").val(list[0].batch_no);
-					queryTemProfile(count0rg);
+					OrgSearch(count0rg,num);
 				}
 			})
 		}else{
@@ -95,7 +95,7 @@ function getOrgList(id){
 						$("#orgId"+id).append("<option value=" + list[i].id + ","+list[i].organization_id+">" + list[i].name_cn + "</option>");
 					}
 					getOrgList(id+1);
-					queryTemProfile(count0rg);
+					OrgSearch(count0rg,num);
 				}
 			})
 			

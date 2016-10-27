@@ -136,7 +136,7 @@
 						newCo2.push(lists[i].co2);
 						newHighAlarmCo2.push(lists[i].high_alarm_co2);
 					}
-						
+					    window.parent.show();
 						window.parent.createChar3(xpNames,newCo2,newHighAlarmCo2);
 				}
 			})
@@ -144,6 +144,7 @@
      }
      
      function closeB(){
+    	 window.parent.hidden();
     	 parent.layer.closeAll();
      }
 </script>
