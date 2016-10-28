@@ -1,12 +1,14 @@
 package com.mtc.zljk.util.service.impl;
 
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
 import com.mtc.zljk.util.common.PageData;
 import com.mtc.zljk.util.dao.impl.DaoSupport;
 import com.mtc.zljk.util.service.OrganService;
-import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
-import java.util.List;
 
 @Service
 public class OrganServiceImpl implements OrganService {
@@ -19,6 +21,11 @@ public class OrganServiceImpl implements OrganService {
 	
 	public List<PageData> getOrgListByRoleId(PageData pd) throws Exception{
 		return (List<PageData>) dao.findForList("SDOrganizationMapper.getOrgListByRoleId", pd);
+	}
+	
+	@Override
+	public List<PageData> getOrgListById(PageData pd) throws Exception {
+		return (List<PageData>) dao.findForList("SDOrganizationMapper.getOrgListById", pd);
 	}
 
 	public List<PageData> getFarmByUserId(PageData pd) throws Exception {

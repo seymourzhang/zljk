@@ -7,6 +7,9 @@
 		SELECT ac.farm_id
 				, ac.house_id
 				, ac.alarm_name
+				, round(ac.actual_value,0) as actual_value
+				, round(ac.set_value,0) as set_value
+				, ac.value_unit
 				, ac.deal_status
 				, ac.alarm_time
 				, ac.deal_time
@@ -33,6 +36,9 @@
 		SELECT ac.farm_id
 				, ac.house_id
 				, ac.alarm_name
+				, round(ac.actual_value,0) as actual_value
+				, round(ac.set_value,0) as set_value
+				, ac.value_unit
 				, ac.deal_status
 				, ac.alarm_time
 				, ac.deal_time
@@ -83,7 +89,9 @@
 			where 
 				house_id = #{house_id}
 	</update>
-	
+	<select id="SP_ALARM" useCache="false">
+        CALL SP_ALARM()
+    </select>
 	
 	
 

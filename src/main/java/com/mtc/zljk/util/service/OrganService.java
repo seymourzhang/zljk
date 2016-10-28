@@ -1,8 +1,8 @@
 package com.mtc.zljk.util.service;
 
-import com.mtc.zljk.util.common.PageData;
-
 import java.util.List;
+
+import com.mtc.zljk.util.common.PageData;
 
 public interface OrganService {
 	List<PageData> getOrgList(PageData pd) throws Exception;
@@ -25,4 +25,7 @@ public interface OrganService {
      * @throws Exception
      */
     List<PageData> getFarmListByUserId(PageData pd) throws Exception;
+	public List<PageData> getOrgListById(PageData pd) throws Exception;
+
+
 }

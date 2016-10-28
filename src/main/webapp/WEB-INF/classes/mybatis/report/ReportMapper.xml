@@ -9,15 +9,15 @@
 		       date, 
 		       right(time,2) as time, 
 		       batch_no, 
-		       inside_temp1,
-               inside_temp2,
-               inside_temp3,
-               inside_temp4,
-		       inside_avg_temp, 
-		       inside_set_temp, 
-		       high_alarm_temp, 
-		       low_alarm_temp, 
-		       outside_temp
+		       ROUND(inside_temp1,1) inside_temp1,
+               ROUND(inside_temp2,1) inside_temp2,
+               ROUND(inside_temp3,1) inside_temp3,
+               ROUND(inside_temp4,1) inside_temp4,
+		       ROUND(inside_avg_temp,1) inside_avg_temp, 
+		       ROUND(inside_set_temp,1) inside_set_temp, 
+		       ROUND(high_alarm_temp,1) high_alarm_temp, 
+		       ROUND(low_alarm_temp,1) low_alarm_temp, 
+		       ROUND(outside_temp,1) outside_temp
 	   FROM     rpt_monitor_daily
 	   where 1=1
  		<if test="farmId != null and farmId !=''"> 
@@ -30,8 +30,9 @@
          and batch_no = #{batchId} 
         </if>
         <if test="beginTime != null and endTime != null">
-			AND (`date` BETWEEN #{beginTime} AND #{endTime} )
-		</if>
+			AND (`date` BETWEEN #{beginTime} AND #{endTime} ) 
+		</if> 
+		order by date
     </select>
      <select id="temProfileMonth" resultType="pd" useCache="false">
        SELECT  farm_id, 
@@ -40,15 +41,15 @@
 		       month,
 		       date, 
 		       batch_no, 
-		       inside_temp1,
-               inside_temp2,
-               inside_temp3,
-               inside_temp4,
-		       inside_avg_temp, 
-		       inside_set_temp, 
-		       high_alarm_temp, 
-		       low_alarm_temp, 
-		       outside_temp
+		       ROUND(inside_temp1,1) inside_temp1,
+               ROUND(inside_temp2,1) inside_temp2,
+               ROUND(inside_temp3,1) inside_temp3,
+               ROUND(inside_temp4,1) inside_temp4,
+		       ROUND(inside_avg_temp,1) inside_avg_temp, 
+		       ROUND(inside_set_temp,1) inside_set_temp, 
+		       ROUND(high_alarm_temp,1) high_alarm_temp, 
+		       ROUND(low_alarm_temp,1) low_alarm_temp, 
+		       ROUND(outside_temp,1) outside_temp
 	   FROM    rpt_monitor_month
 	   where 1=1
  		<if test="farmId != null and farmId !=''"> 
@@ -62,7 +63,9 @@
         </if>
         <if test="beginTime != null and endTime != null">
 			AND (`date` BETWEEN #{beginTime} AND #{endTime} )
-		</if>
+		</if> 
+		
+		order by date
     </select>
     
 </mapper>

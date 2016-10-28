@@ -1,6 +1,5 @@
 package com.mtc.zljk.product.action;
 
-import com.mtc.zljk.monitor.action.MonitorAction;
 import com.mtc.zljk.product.service.FarmTaskService;
 import com.mtc.zljk.product.service.TaskService;
 import com.mtc.zljk.user.entity.SDUser;
@@ -10,11 +9,17 @@ import com.mtc.zljk.util.common.Json;
 import com.mtc.zljk.util.common.Page;
 import com.mtc.zljk.util.common.PageData;
 import com.mtc.zljk.util.service.OrganService;
+import com.mtc.zljk.monitor.action.MonitorAction;
+
+import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
@@ -26,7 +31,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("/product")
-public class MissionRemindAction extends BaseAction {
+public class MissionRemindAction extends BaseAction{
     @Autowired
     private OrganService organService;
 
@@ -45,11 +50,15 @@ public class MissionRemindAction extends BaseAction {
         pd.put("user_id", user.getId());
         List<PageData> lpd = organService.selectOrgByUser(pd);
         List<PageData> tasks = getTasks(pd);
+        JSONArray a = new JSONArray();
+        for (PageData task : tasks) {
+            a.put(task);
+        }
         mav.addObject("org_name", lpd.get(0).get("name_cn").toString());
         mav.addObject("task_type", getTaskTypeName());
         mav.addObject("task_code", getTaskCodeName(pd));
         mav.addObject("date_type", getDateType());
-        mav.addObject("tasks", tasks);
+        mav.addObject("tasks", a);
         mav.setViewName("modules/product/missionRemind");
         return mav;
     }

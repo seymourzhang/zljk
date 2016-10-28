@@ -161,11 +161,19 @@
         ON mc.house_id= h.id
         WHERE mc.show_flag=1
         <if test="farmId != null">
-        AND mc.farm_id = #{farmId}
-        </if>
+        AND mc.farm_id IN (
+        <foreach collection="farmId" item="item" index="index" separator=",">
+            #{item}
+        </foreach>
+        )
+       </if>
         <if test="houseId != null">
-              AND mc.house_id = #{houseId}
-             </if>                
+            AND mc.house_id in (
+            <foreach collection="houseId" item="item" index="index" separator=",">
+                #{item}
+            </foreach>
+            )
+        </if>
         ORDER BY mc.collect_datetime DESC
     </select>
 

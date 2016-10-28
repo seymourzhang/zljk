@@ -18,14 +18,26 @@
 
     <meta charset="UTF-8">
     <%@ include file="../../framework/inc.jsp"%>
-    <script type="text/javascript" src="<%=path%>/framework/js/extJquery.js"></script>
     <link rel="stylesheet" href="<%=path%>/modules/product/css/style.css" media="screen" type="text/css" />
+
+
+    <script src="<%=path%>/framework/js/bootstrap_table/bootstrap-table.js"></script>
+    <link href="<%=path%>/framework/js/bootstrap_table/bootstrap-table.css" rel="stylesheet" />
+    <script src="<%=path%>/framework/js/bootstrap_table/locale/bootstrap-table-zh-CN.js"></script>
+
+    <link rel="stylesheet" href="<%=path%>/framework/js/bootstrap_editable/1.5.1/css/bootstrap-editable.css">
+    <script src="<%=path%>/framework/js/bootstrap_editable/1.5.1/js/bootstrap-editable.js"></script>
+    <script src="<%=path%>/framework/js/bootstrap_table/extensions/editable/bootstrap-table-editable.js"></script>
+    <script type="text/javascript" src="<%=path%>/framework/table/table.js"></script>
     <script type="text/javascript" src="<%=path%>/modules/product/js/missionRemind.js"></script>
+
+
 
 </head>
 <script>
     jQuery(document).ready(function () {
         checkDate($("#wd")[0]);
+        initTable("stock", getStockTableColumns(), ${tasks});
     });
     function checkDate(wd) {
         var che = document.getElementsByName("week");
@@ -48,7 +60,7 @@
    <div class="panels">
         <table class="panel">
             <tr>
-                <td><p style="width: 70px">任务类别</p></td>
+                <td style="width: 50px;"><p style="width: 70px">任务类别</p></td>
                 <td>
                     <select id="taskType" class="select1" style="margin: 0px;" onchange="queryNext();">
                         <c:if test="${!empty task_type}">
@@ -68,10 +80,10 @@
                     </select>
                 </td>
                 <td>
-                    <input id="dateValues" class="select1" style="position: relative;left: 70px;height: 30px;width: 250px;"/>
+                    <input id="dateValues" class="select1" style="position: relative;left: 20px;height: 30px;width: 250px;"/>
                 </td>
                 <td>
-                    <button style="position: relative; left: 100px;height: 22px;width: 80px;background: darkgreen;color: #FFFFFF;" onclick="addMissionRemind();">增加</button>
+                    <button style="position: relative; left: 100px;height: 30px;width: 80px;" class="btn green"  onclick="addMissionRemind();">增加</button>
                 </td>
             </tr>
             <tr>
@@ -85,10 +97,10 @@
                         </c:if>
                     </select>
                 </td>
-                <td><p style="position:relative; left: 40px;width:70px;">提醒日期</p></td>
+                <td><p style="position:relative; top: 5px; left: 50px;">提醒日期</p></td>
                 <td>
                     <div id="weeks">
-                        <table style="position: relative;left: 60px;">
+                        <table style="position: relative;left: 20px;">
                             <tr>
                                 <td><input name="week" type="checkbox" value="1"/></td><td><p style="width: 40px;margin: 0px;">周一</p></td>
                                 <td><input name="week" type="checkbox" value="2"/></td><td><p style="width: 40px;margin: 0px;">周二</p></td>
@@ -104,16 +116,19 @@
                     </div>
                 </td>
                 <td>
-                    <button style="position: relative; left: 100px; height: 22px;width: 80px;background: darkgreen;color: #FFFFFF;" onclick="deleteTask();">删除</button>
+                    <button style="position: relative; left: 100px; height: 30px;width: 80px;" class="btn green" onclick="deleteTask();">删除</button>
                 </td>
             </tr>
         </table>
-       <hr style="width: 100%;background: #848484;height: 5px;position: relative;top: 50px;">
+       <hr style="width: 100%;background: #848484;height: 5px;position: relative;top: 30px;">
 
-       <label style="position: relative;top: 100px;text-align: center;height: 2%; width: 84%; font-size: 30px;background: #FFFFFF;"><p>${org_name}</p></label>
+       <label style="position: relative;top: 30px;text-align: center;height: 20px; width: 84%; font-size: 30px;background: #FFFFFF;"><p>${org_name}</p></label>
 
-       <div style="position: relative;top: 150px;overflow-x: auto; overflow-y: auto; height: 53%; width:90%;">
-           <table id="formData" style="text-align: center;width: 100%;height: 100%;" border="1">
+       <div style="position: relative;top: 50px;overflow-x: auto; overflow-y: auto; height: 76%; width:99%;">
+
+           <table id="stockTable"></table>
+
+           <%--<table id="formData" style="text-align: center;width: 100%;height: 100%;" border="1">
                <tr style="background: #04488a; color: #FFFFFF;text-align: center;">
                    <td><p>选择</p></td>
                    <td><p>编号</p></td>
@@ -132,7 +147,7 @@
                    <td><p>${task.date_values}</p></td>
                </tr>
                </c:forEach>
-           </table>
+           </table>--%>
        </div>
 
 </div>

@@ -9,10 +9,10 @@
 				date,
 				right(time,2) as time,
 				batch_no,
-				water_consumption,
-				set_water_deprivation,
-				high_water_deprivation,
-				low_water_deprivation
+				ROUND(water_consumption,1) water_consumption,
+				ROUND(set_water_deprivation,1) set_water_deprivation,
+				ROUND(high_water_deprivation,1) high_water_deprivation,
+				ROUND(low_water_deprivation,1) low_water_deprivation
 		FROM rpt_monitor_daily
 		where 1=1
 		<if test="farmId != null and farmId !=''">
@@ -35,10 +35,10 @@
 			month,
 			date,
 			batch_no,
-			water_consumption,
-			set_water_deprivation,
-			high_water_deprivation,
-			low_water_deprivation
+			ROUND(water_consumption,1) water_consumption,
+			ROUND(set_water_deprivation,1) set_water_deprivation,
+			ROUND(high_water_deprivation,1) high_water_deprivation,
+			ROUND(low_water_deprivation,1) low_water_deprivation
 	FROM rpt_monitor_month
 	where 1=1
 		<if test="farmId != null and farmId !=''">
@@ -53,6 +53,7 @@
 		<if test="beginTime != null and endTime != null">
 			AND (`date` BETWEEN #{beginTime} AND #{endTime} )
 		</if>
+		ORDER BY DATE 
 	</select>
 
 </mapper>

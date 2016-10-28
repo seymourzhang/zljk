@@ -105,6 +105,7 @@
  		<if test="farmId != null and farmId !='' "> 
          and farm_id = #{farmId} 
         </if> 
+        order by farm_id,house_code
 	</select>
 	
 	<select id="selectHouseById" resultType="pd" useCache="false">
@@ -135,8 +136,8 @@
 		<if test="house_name != null and house_name != ''">
 			and house_name = #{house_name}
 		</if>
-		<if test="farm_id != null and farm_id != ''">
-			and farm_id = #{farm_id}
+		<if test="farmId != null and farmId != ''">
+			and farm_id = #{farmId}
 		</if>
 		
 	</select>
@@ -158,6 +159,7 @@
          <if test="operation_type != null and operation_type !=''"> 
          and operation_type = #{operation_type} 
         </if>
+        order by id desc
 	</select>
 	
 	
@@ -313,6 +315,7 @@
 			farm_id,
 			batch_no,
 			batch_date,
+			day_age_curr,
 			count,
 			operation_type,
 			create_person,
@@ -324,6 +327,7 @@
 			#{farm_id},
 			#{batch_no},
 			#{batch_date},
+			#{day_age_curr},
 			#{count},
 			#{operation_type},
 			#{create_person},
@@ -335,7 +339,14 @@
 	<!-- 修改批次信息 -->
 	<update id="editBatch" parameterType="pd" flushCache="false">
 		update  s_d_batch
-			set count	= #{count}
+			set 
+			day_age_curr = #{day_age_curr}
+			<if test="count != null and count !='' "> 
+			,count	= #{count}
+			</if>
+			<if test="count == null or count =='' "> 
+			,count	= null
+			</if>
 			where id = #{id}
 	</update>
 	

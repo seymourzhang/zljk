@@ -78,14 +78,12 @@
     
     <update id="updateYT" parameterType="pd" flushCache="false">
 		update  s_d_device_data_cur
+		       set collect_datetime			= #{collect_datetime}
 			<if test="co2 != null and co2 != ''">
-				set co2				= #{co2}
-			</if>
-			<if test="current_timestamp != null and current_timestamp != ''">
-				set current_timestamp				= #{current_timestamp}
+				, co2				= #{co2}
 			</if>
 			<if test="negative_pressure != null and negative_pressure != ''">
-				set negative_pressure				= #{negative_pressure}
+				, negative_pressure				= #{negative_pressure}
 			</if>
 			where 
 				device_id = #{device_id} and  device_type=#{device_type} and port_id=#{port_id}

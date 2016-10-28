@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" build-on-make="true" name="zljk:war exploded">
-    <output-path>$PROJECT_DIR$/target/zljk-0.0.1-SNAPSHOT</output-path>
+    <output-path>$PROJECT_DIR$/out/zljk_war_exploded</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -25,7 +25,6 @@
           <element id="library" level="project" name="Maven: org.mybatis.caches:mybatis-oscache:1.0.1" />
           <element id="library" level="project" name="Maven: opensymphony:oscache:2.4" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.32" />
-          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:3.0-alpha-1" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.2" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.12" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.12" />
@@ -33,6 +32,8 @@
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.2" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.3.2" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.9" />
+          <element id="library" level="module" name="Maven: com.alibaba:jconsole:1.8.0" module-name="zljk" />
+          <element id="library" level="module" name="Maven: com.alibaba:tools:1.8.0" module-name="zljk" />
           <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.1.41" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
           <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.3.1" />
@@ -55,10 +56,8 @@
           <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.1" />
           <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.5" />
           <element id="library" level="project" name="Maven: net.sf.ezmorph:ezmorph:1.0.6" />
+          <element id="library" level="project" name="taobao-api-1.0.0.RELEASE" />
         </element>
-      </element>
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/zljk-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="zljk/web/Web" />
     </root>

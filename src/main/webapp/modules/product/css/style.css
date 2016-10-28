@@ -29,7 +29,9 @@ label:hover {
 	box-sizing: border-box;*/
     position: relative;
 	width: 80%;
-	height: 20%;
+    height: 10%;
+    left: 60px;
+    top: 30px;
 	border:solid 1px #FFFFFF;
 }
 

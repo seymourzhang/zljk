@@ -1,5 +1,6 @@
-.svn
-target
-.idea
-out
+.svn/*
+target/*
+.idea/*
+out/*
 *.iml
+*.class
